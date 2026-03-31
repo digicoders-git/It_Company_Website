@@ -1,113 +1,108 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { ArrowRight, Database, Cloud, Rocket, Cpu, Shield, BarChart2 } from 'lucide-react';
+import { ArrowRight, Globe, Smartphone, Code, TrendingUp } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const services = [
   {
-    icon: Database,
-    title: 'Data Infrastructure',
-    description: 'We build robust data infrastructure solutions that help businesses manage, store, and process large volumes of data efficiently.',
-    color: 'bg-blue-50',
-    iconColor: 'text-blue-500',
+    icon: Globe,
+    title: 'Website Development',
+    description: 'Create stunning, high-performance websites that drive results and engage your audience.',
+    link: '/services/website-development',
+    bgImage: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800',
+    bgColor: 'from-blue-600/90 to-purple-600/90',
   },
   {
-    icon: Cloud,
-    title: 'IT Cloud Integration',
-    description: 'Seamlessly integrate your business operations with cloud platforms for improved scalability, flexibility, and cost efficiency.',
-    color: 'bg-pink-50',
-    iconColor: 'text-primary-pink',
+    icon: Smartphone,
+    title: 'Mobile App Development',
+    description: 'Transform your ideas into powerful iOS and Android applications with exceptional UX.',
+    link: '/services/mobile-app-development',
+    bgImage: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&q=80&w=800',
+    bgColor: 'from-primary-teal/90 to-rose-500/90',
+    popular: true,
   },
   {
-    icon: Rocket,
-    title: 'IT Startup Projects',
-    description: 'We help startups build their digital foundation with tailored IT solutions, from MVP development to full-scale product launches.',
-    color: 'bg-teal-50',
-    iconColor: 'text-primary-teal',
+    icon: Code,
+    title: 'Software Development',
+    description: 'Custom software solutions built to streamline operations and drive business growth.',
+    link: '/services/software-development',
+    bgImage: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=800',
+    bgColor: 'from-emerald-600/90 to-teal-600/90',
   },
   {
-    icon: Cpu,
-    title: 'Product Engineering',
-    description: 'End-to-end product engineering services covering design, development, testing, and deployment of software products.',
-    color: 'bg-purple-50',
-    iconColor: 'text-purple-500',
-  },
-  {
-    icon: Shield,
-    title: 'Business Security',
-    description: 'Comprehensive cybersecurity solutions to protect your business from digital threats, data breaches, and vulnerabilities.',
-    color: 'bg-orange-50',
-    iconColor: 'text-orange-500',
-  },
-  {
-    icon: BarChart2,
-    title: 'IT Consulting',
-    description: 'Strategic IT consulting services to help businesses align their technology investments with their overall business goals.',
-    color: 'bg-green-50',
-    iconColor: 'text-green-500',
+    icon: TrendingUp,
+    title: 'Digital Marketing',
+    description: 'Boost your online presence with data-driven marketing strategies that deliver results.',
+    link: '/services/digital-marketing',
+    bgImage: 'https://images.unsplash.com/photo-1533750349088-cd871a92f312?auto=format&fit=crop&q=80&w=800',
+    bgColor: 'from-orange-500/90 to-amber-600/90',
   },
 ];
 
 const ServicesSection = () => {
   return (
-    <section id="solutions" className="section-padding bg-white">
+    <section id="solutions" className="py-20 lg:py-28 bg-white">
       <div className="container">
         {/* Header */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-end mb-16">
-          <div>
-            <div className="flex items-center gap-3 mb-4">
-              <div className="h-[2px] w-10 bg-primary-pink" />
-              <span className="text-primary-pink font-semibold uppercase tracking-widest text-sm">
-                What We Offer
-              </span>
-            </div>
-            <h2 className="text-4xl lg:text-5xl font-bold text-primary-dark leading-tight">
-              Our IT Solutions &<br />
-              <span className="text-primary-pink">Services</span>
-            </h2>
+        <div className="text-center max-w-2xl mx-auto mb-16">
+          <div className="inline-flex items-center gap-2 bg-primary-teal/10 px-4 py-2 rounded-full mb-6">
+            <span className="w-2 h-2 rounded-full bg-primary-teal animate-pulse" />
+            <span className="text-primary-teal font-bold uppercase tracking-wider text-sm">
+              What We Offer
+            </span>
           </div>
-          <div className="lg:text-right">
-            <p className="text-gray-500 font-normal leading-relaxed mb-6">
-              We provide a wide range of IT services designed to help businesses grow, innovate, and stay competitive in the digital age.
-            </p>
-            <button className="btn-primary inline-flex">
-              All Services <ArrowRight className="h-4 w-4" />
-            </button>
-          </div>
+          <h2 className="text-4xl lg:text-5xl font-bold text-primary-dark leading-tight">
+            Our Core <span className="text-primary-teal">Services</span>
+          </h2>
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
           {services.map((service, idx) => {
             const Icon = service.icon;
             return (
-              <motion.div
+              <Link
                 key={idx}
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: idx * 0.1 }}
-                className="group relative bg-white border border-gray-100 p-8 shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-2 overflow-hidden"
+                to={service.link}
+                className="group relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
               >
-                {/* Icon */}
-                <div className={`inline-flex h-16 w-16 items-center justify-center rounded-none mb-6 ${service.color} transition-all duration-300 group-hover:bg-primary-pink`}>
-                  <Icon className={`h-8 w-8 ${service.iconColor} transition-colors duration-300 group-hover:text-white`} />
+                {/* Background Image */}
+                <div className="absolute inset-0">
+                  <img 
+                    src={service.bgImage} 
+                    alt={service.title}
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
+                  <div className={`absolute inset-0 bg-gradient-to-br ${service.bgColor}`} />
                 </div>
 
-                <h3 className="text-xl font-bold text-primary-dark mb-3 tracking-tight">
-                  {service.title}
-                </h3>
-                <p className="text-gray-500 text-sm leading-relaxed font-normal mb-6">
-                  {service.description}
-                </p>
+                {/* Popular Badge */}
+                {service.popular && (
+                  <div className="absolute top-4 right-4 bg-primary-teal text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider z-10">
+                    Popular
+                  </div>
+                )}
 
-                <a href="#" className="inline-flex items-center gap-2 text-primary-pink font-semibold text-sm uppercase tracking-wider hover-line">
-                  Read More <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-                </a>
+                {/* Content */}
+                <div className="relative z-10 p-8 min-h-[360px] flex flex-col">
+                  {/* Icon */}
+                  <div className="w-16 h-16 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center mb-6 transition-transform duration-300 group-hover:scale-110">
+                    <Icon className="h-8 w-8 text-white" />
+                  </div>
 
-                {/* Corner decoration */}
-                <div className="absolute bottom-0 right-0 w-16 h-16 bg-primary-pink/5 transition-all duration-500 group-hover:w-full group-hover:h-full group-hover:bg-primary-pink/3 -z-0" />
-                <div className="absolute bottom-0 right-0 w-0 h-1 bg-primary-pink transition-all duration-500 group-hover:w-full" />
-              </motion.div>
+                  {/* Text Content - Pushed to bottom */}
+                  <div className="mt-auto">
+                    <h3 className="text-2xl font-bold text-white mb-3 tracking-tight">
+                      {service.title}
+                    </h3>
+                    <p className="text-white/80 text-sm leading-relaxed mb-4">
+                      {service.description}
+                    </p>
+                    <span className="inline-flex items-center gap-2 text-white font-semibold text-sm group-hover:gap-3 transition-all">
+                      Learn More <ArrowRight className="h-4 w-4" />
+                    </span>
+                  </div>
+                </div>
+              </Link>
             );
           })}
         </div>

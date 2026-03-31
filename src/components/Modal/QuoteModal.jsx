@@ -93,7 +93,7 @@ const QuoteModal = ({ isOpen, onClose }) => {
             >
               {/* Header */}
               <div className="bg-primary-dark p-5 relative overflow-hidden shrink-0">
-                <div className="absolute top-0 right-0 w-40 h-40 rounded-full bg-primary-pink/10 translate-x-1/3 -translate-y-1/3" />
+                <div className="absolute top-0 right-0 w-40 h-40 rounded-full bg-primary-teal/10 translate-x-1/3 -translate-y-1/3" />
                 <div className="relative z-10">
                   <h2 className="text-2xl font-black text-white mb-1">
                     Get A Free Quote
@@ -134,7 +134,7 @@ const QuoteModal = ({ isOpen, onClose }) => {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                       <div>
                         <label className="flex items-center gap-1.5 text-xs font-bold text-primary-dark mb-1 uppercase tracking-wider">
-                          <User className="h-3 w-3 text-primary-pink" />
+                          <User className="h-3 w-3 text-primary-teal" />
                           Your Name *
                         </label>
                         <input
@@ -144,13 +144,13 @@ const QuoteModal = ({ isOpen, onClose }) => {
                           onChange={handleChange}
                           required
                           placeholder="John Doe"
-                          className="w-full border-2 border-gray-200 py-2 px-3 text-sm focus:outline-none focus:border-primary-pink transition-colors"
+                          className="w-full border-2 border-gray-200 py-2 px-3 text-sm focus:outline-none focus:border-primary-teal transition-colors"
                         />
                       </div>
 
                       <div>
                         <label className="flex items-center gap-1.5 text-xs font-bold text-primary-dark mb-1 uppercase tracking-wider">
-                          <Mail className="h-3 w-3 text-primary-pink" />
+                          <Mail className="h-3 w-3 text-primary-teal" />
                           Email Address *
                         </label>
                         <input
@@ -160,7 +160,7 @@ const QuoteModal = ({ isOpen, onClose }) => {
                           onChange={handleChange}
                           required
                           placeholder="john@example.com"
-                          className="w-full border-2 border-gray-200 py-2 px-3 text-sm focus:outline-none focus:border-primary-pink transition-colors"
+                          className="w-full border-2 border-gray-200 py-2 px-3 text-sm focus:outline-none focus:border-primary-teal transition-colors"
                         />
                       </div>
                     </div>
@@ -168,7 +168,7 @@ const QuoteModal = ({ isOpen, onClose }) => {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                       <div>
                         <label className="flex items-center gap-1.5 text-xs font-bold text-primary-dark mb-1 uppercase tracking-wider">
-                          <Phone className="h-3 w-3 text-primary-pink" />
+                          <Phone className="h-3 w-3 text-primary-teal" />
                           Phone Number *
                         </label>
                         <input
@@ -178,13 +178,13 @@ const QuoteModal = ({ isOpen, onClose }) => {
                           onChange={handleChange}
                           required
                           placeholder="+1 (555) 000-0000"
-                          className="w-full border-2 border-gray-200 py-2 px-3 text-sm focus:outline-none focus:border-primary-pink transition-colors"
+                          className="w-full border-2 border-gray-200 py-2 px-3 text-sm focus:outline-none focus:border-primary-teal transition-colors"
                         />
                       </div>
 
                       <div>
                         <label className="flex items-center gap-1.5 text-xs font-bold text-primary-dark mb-1 uppercase tracking-wider">
-                          <Briefcase className="h-3 w-3 text-primary-pink" />
+                          <Briefcase className="h-3 w-3 text-primary-teal" />
                           Company Name
                         </label>
                         <input
@@ -193,7 +193,7 @@ const QuoteModal = ({ isOpen, onClose }) => {
                           value={formData.company}
                           onChange={handleChange}
                           placeholder="Your Company"
-                          className="w-full border-2 border-gray-200 py-2 px-3 text-sm focus:outline-none focus:border-primary-pink transition-colors"
+                          className="w-full border-2 border-gray-200 py-2 px-3 text-sm focus:outline-none focus:border-primary-teal transition-colors"
                         />
                       </div>
                     </div>
@@ -208,7 +208,7 @@ const QuoteModal = ({ isOpen, onClose }) => {
                           value={formData.service}
                           onChange={handleChange}
                           required
-                          className="w-full border-2 border-gray-200 py-2 px-3 text-sm focus:outline-none focus:border-primary-pink transition-colors bg-white"
+                          className="w-full border-2 border-gray-200 py-2 px-3 text-sm focus:outline-none focus:border-primary-teal transition-colors bg-white"
                         >
                           <option value="">Select a service</option>
                           {services.map((service, idx) => (
@@ -228,7 +228,7 @@ const QuoteModal = ({ isOpen, onClose }) => {
                           value={formData.budget}
                           onChange={handleChange}
                           required
-                          className="w-full border-2 border-gray-200 py-2 px-3 text-sm focus:outline-none focus:border-primary-pink transition-colors bg-white"
+                          className="w-full border-2 border-gray-200 py-2 px-3 text-sm focus:outline-none focus:border-primary-teal transition-colors bg-white"
                         >
                           <option value="">Select budget range</option>
                           {budgets.map((budget, idx) => (
@@ -242,7 +242,7 @@ const QuoteModal = ({ isOpen, onClose }) => {
 
                     <div>
                       <label className="flex items-center gap-1.5 text-xs font-bold text-primary-dark mb-1 uppercase tracking-wider">
-                        <MessageSquare className="h-3 w-3 text-primary-pink" />
+                        <MessageSquare className="h-3 w-3 text-primary-teal" />
                         Project Details *
                       </label>
                       <textarea
@@ -252,7 +252,7 @@ const QuoteModal = ({ isOpen, onClose }) => {
                         required
                         rows="3"
                         placeholder="Tell us about your project requirements..."
-                        className="w-full border-2 border-gray-200 py-2 px-3 text-sm focus:outline-none focus:border-primary-pink transition-colors resize-none"
+                        className="w-full border-2 border-gray-200 py-2 px-3 text-sm focus:outline-none focus:border-primary-teal transition-colors resize-none"
                       />
                     </div>
 
@@ -263,7 +263,7 @@ const QuoteModal = ({ isOpen, onClose }) => {
                       <button
                         type="submit"
                         disabled={isSubmitting}
-                        className={`btn-primary shadow-lg shadow-primary-pink/30 ${
+                        className={`btn-primary shadow-lg shadow-primary-teal/30 ${
                           isSubmitting ? 'opacity-50 cursor-not-allowed' : ''
                         }`}
                       >
@@ -287,7 +287,7 @@ const QuoteModal = ({ isOpen, onClose }) => {
               <div className="bg-[#F5F7F9] px-5 py-2.5 border-t border-gray-200 shrink-0">
                 <p className="text-xs text-gray-600 font-medium text-center">
                   By submitting this form, you agree to our{' '}
-                  <a href="#" className="text-primary-pink font-bold hover:underline">
+                  <a href="#" className="text-primary-teal font-bold hover:underline">
                     Privacy Policy
                   </a>
                 </p>

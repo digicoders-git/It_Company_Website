@@ -1,8 +1,7 @@
 import React from 'react';
 import Hero from '../components/Hero/Hero';
-import Features from '../components/Features/Features';
-import About from '../components/About/About';
 import ServicesSection from '../components/Services/ServicesSection';
+import About from '../components/About/About';
 import ServicesGrid from '../components/Services/ServicesGrid';
 import CTABanner from '../components/CTA/CTABanner';
 import CaseStudies from '../components/CaseStudies/CaseStudies';
@@ -13,9 +12,8 @@ const HomePage = () => {
   return (
     <>
       <Hero />
-      <Features />
-      <About />
       <ServicesSection />
+      <About />
       <ServicesGrid />
       <CTABanner />
       <CaseStudies />

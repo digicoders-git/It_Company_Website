@@ -201,7 +201,7 @@ const NewsDetailPage = () => {
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-4xl font-black text-primary-dark mb-4">Article Not Found</h1>
-          <Link to="/news" className="text-primary-pink font-bold hover:underline">
+          <Link to="/news" className="text-primary-teal font-bold hover:underline">
             Back to News
           </Link>
         </div>
@@ -233,11 +233,11 @@ const NewsDetailPage = () => {
             className="max-w-4xl mx-auto"
           >
             <div className="flex items-center justify-center gap-3 mb-4">
-              <div className="h-[2px] w-10 bg-primary-pink" />
-              <span className="text-primary-pink font-bold uppercase tracking-widest text-sm">
+              <div className="h-[2px] w-10 bg-primary-teal" />
+              <span className="text-primary-teal font-bold uppercase tracking-widest text-sm">
                 {news.category}
               </span>
-              <div className="h-[2px] w-10 bg-primary-pink" />
+              <div className="h-[2px] w-10 bg-primary-teal" />
             </div>
             <h1 className="text-4xl lg:text-5xl font-black text-white leading-tight mb-6 text-center">
               {news.title}
@@ -246,15 +246,15 @@ const NewsDetailPage = () => {
             {/* Meta Info */}
             <div className="flex flex-wrap items-center justify-center gap-6 text-gray-300 text-sm font-bold">
               <span className="flex items-center gap-2">
-                <User className="h-4 w-4 text-primary-pink" />
+                <User className="h-4 w-4 text-primary-teal" />
                 {news.author.name}
               </span>
               <span className="flex items-center gap-2">
-                <Calendar className="h-4 w-4 text-primary-pink" />
+                <Calendar className="h-4 w-4 text-primary-teal" />
                 {news.date}
               </span>
               <span className="flex items-center gap-2">
-                <Tag className="h-4 w-4 text-primary-pink" />
+                <Tag className="h-4 w-4 text-primary-teal" />
                 {news.readTime}
               </span>
             </div>
@@ -306,7 +306,7 @@ const NewsDetailPage = () => {
                   {news.tags.map((tag, idx) => (
                     <span
                       key={idx}
-                      className="text-xs font-bold text-gray-600 bg-gray-100 px-4 py-2 uppercase tracking-wider hover:bg-primary-pink hover:text-white transition-colors cursor-pointer"
+                      className="text-xs font-bold text-gray-600 bg-gray-100 px-4 py-2 uppercase tracking-wider hover:bg-primary-teal hover:text-white transition-colors cursor-pointer"
                     >
                       {tag}
                     </span>
@@ -321,14 +321,14 @@ const NewsDetailPage = () => {
                     onClick={handleLike}
                     className={`flex items-center gap-2 px-6 py-3 font-bold text-sm uppercase tracking-wider transition-all ${
                       liked
-                        ? 'bg-primary-pink text-white'
-                        : 'border-2 border-gray-200 text-gray-600 hover:border-primary-pink hover:text-primary-pink'
+                        ? 'bg-primary-teal text-white'
+                        : 'border-2 border-gray-200 text-gray-600 hover:border-primary-teal hover:text-primary-teal'
                     }`}
                   >
                     <ThumbsUp className="h-4 w-4" />
                     {likes} Likes
                   </button>
-                  <button className="flex items-center gap-2 border-2 border-gray-200 text-gray-600 px-6 py-3 font-bold text-sm uppercase tracking-wider hover:border-primary-pink hover:text-primary-pink transition-all">
+                  <button className="flex items-center gap-2 border-2 border-gray-200 text-gray-600 px-6 py-3 font-bold text-sm uppercase tracking-wider hover:border-primary-teal hover:text-primary-teal transition-all">
                     <MessageCircle className="h-4 w-4" />
                     12 Comments
                   </button>
@@ -339,7 +339,7 @@ const NewsDetailPage = () => {
                   {[Facebook, Twitter, Linkedin].map((Icon, idx) => (
                     <button
                       key={idx}
-                      className="h-10 w-10 border-2 border-gray-200 flex items-center justify-center text-gray-600 hover:border-primary-pink hover:bg-primary-pink hover:text-white transition-all"
+                      className="h-10 w-10 border-2 border-gray-200 flex items-center justify-center text-gray-600 hover:border-primary-teal hover:bg-primary-teal hover:text-white transition-all"
                     >
                       <Icon className="h-4 w-4" />
                     </button>
@@ -357,7 +357,7 @@ const NewsDetailPage = () => {
                   />
                   <div>
                     <h4 className="text-xl font-black text-primary-dark mb-1">{news.author.name}</h4>
-                    <p className="text-primary-pink text-sm font-bold uppercase tracking-wider mb-3">
+                    <p className="text-primary-teal text-sm font-bold uppercase tracking-wider mb-3">
                       {news.author.role}
                     </p>
                     <p className="text-gray-600 text-sm leading-relaxed font-medium">
@@ -371,7 +371,7 @@ const NewsDetailPage = () => {
               <div className="mt-12">
                 <h3 className="text-2xl font-black text-primary-dark mb-8 pb-4 border-b border-gray-200 relative">
                   Related Articles
-                  <span className="absolute bottom-0 left-0 h-[2px] w-16 bg-primary-pink" />
+                  <span className="absolute bottom-0 left-0 h-[2px] w-16 bg-primary-teal" />
                 </h3>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                   {relatedPosts.map((post, idx) => (
@@ -387,7 +387,7 @@ const NewsDetailPage = () => {
                           className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                         />
                       </div>
-                      <h5 className="text-sm font-black text-primary-dark leading-snug mb-2 group-hover:text-primary-pink transition-colors">
+                      <h5 className="text-sm font-black text-primary-dark leading-snug mb-2 group-hover:text-primary-teal transition-colors">
                         {post.title}
                       </h5>
                       <span className="text-xs text-gray-400 font-bold uppercase tracking-wider">
@@ -409,7 +409,7 @@ const NewsDetailPage = () => {
               >
                 <h4 className="text-lg font-black text-primary-dark mb-6 pb-4 border-b border-gray-200 relative">
                   Recent Posts
-                  <span className="absolute bottom-0 left-0 h-[2px] w-10 bg-primary-pink" />
+                  <span className="absolute bottom-0 left-0 h-[2px] w-10 bg-primary-teal" />
                 </h4>
                 <ul className="space-y-4">
                   {relatedPosts.map((post, idx) => (
@@ -421,7 +421,7 @@ const NewsDetailPage = () => {
                           className="w-20 h-20 object-cover shrink-0"
                         />
                         <div>
-                          <h5 className="text-sm font-black text-primary-dark leading-snug mb-2 group-hover:text-primary-pink transition-colors line-clamp-2">
+                          <h5 className="text-sm font-black text-primary-dark leading-snug mb-2 group-hover:text-primary-teal transition-colors line-clamp-2">
                             {post.title}
                           </h5>
                           <span className="text-xs text-gray-400 font-bold uppercase tracking-wider">
@@ -448,7 +448,7 @@ const NewsDetailPage = () => {
                 <input
                   type="email"
                   placeholder="Your email address"
-                  className="w-full bg-white/10 border border-white/20 py-3 px-4 text-white text-sm placeholder:text-gray-500 focus:outline-none focus:border-primary-pink transition-colors mb-3"
+                  className="w-full bg-white/10 border border-white/20 py-3 px-4 text-white text-sm placeholder:text-gray-500 focus:outline-none focus:border-primary-teal transition-colors mb-3"
                 />
                 <button className="w-full btn-primary justify-center">
                   Subscribe <ArrowRight className="h-4 w-4" />

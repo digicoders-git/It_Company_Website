@@ -57,11 +57,11 @@ const CaseStudyCard = ({ caseStudy, idx }) => {
       <div className="relative h-64 overflow-hidden bg-gray-200">
         {!imageLoaded && !imageError && (
           <div className="absolute inset-0 flex items-center justify-center bg-gray-100">
-            <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary-pink"></div>
+            <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary-teal"></div>
           </div>
         )}
         {imageError && (
-          <div className="absolute inset-0 flex flex-col items-center justify-center bg-gradient-to-br from-primary-dark to-primary-pink">
+          <div className="absolute inset-0 flex flex-col items-center justify-center bg-gradient-to-br from-primary-dark to-primary-teal">
             <Code className="h-12 w-12 text-white/50 mb-2" />
             <span className="text-white/70 text-sm font-bold">Product Engineering</span>
           </div>
@@ -87,7 +87,7 @@ const CaseStudyCard = ({ caseStudy, idx }) => {
         {/* Hover Arrow */}
         <Link
           to={`/case-studies/${caseStudy.id}`}
-          className="absolute bottom-4 right-4 h-12 w-12 bg-primary-pink flex items-center justify-center opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-300 z-10"
+          className="absolute bottom-4 right-4 h-12 w-12 bg-primary-teal flex items-center justify-center opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-300 z-10"
         >
           <ArrowRight className="h-5 w-5 text-white" />
         </Link>
@@ -106,7 +106,7 @@ const CaseStudyCard = ({ caseStudy, idx }) => {
         </div>
 
         <Link to={`/case-studies/${caseStudy.id}`}>
-          <h3 className="text-lg font-black text-primary-dark leading-snug mb-3 group-hover:text-primary-pink transition-colors">
+          <h3 className="text-lg font-black text-primary-dark leading-snug mb-3 group-hover:text-primary-teal transition-colors">
             {caseStudy.title}
           </h3>
         </Link>

@@ -39,11 +39,11 @@ const CaseCard = ({ item, idx }) => {
       <div className="relative h-64 overflow-hidden bg-gray-200">
         {!imageLoaded && !imageError && (
           <div className="absolute inset-0 flex items-center justify-center bg-gray-100">
-            <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary-pink"></div>
+            <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary-teal"></div>
           </div>
         )}
         {imageError && (
-          <div className="absolute inset-0 flex flex-col items-center justify-center bg-gradient-to-br from-primary-dark to-primary-pink">
+          <div className="absolute inset-0 flex flex-col items-center justify-center bg-gradient-to-br from-primary-dark to-primary-teal">
             <ImageIcon className="h-12 w-12 text-white/50 mb-2" />
             <span className="text-white/70 text-sm font-bold">{item.category}</span>
           </div>
@@ -61,19 +61,19 @@ const CaseCard = ({ item, idx }) => {
         <div className="absolute inset-0 bg-gradient-to-t from-primary-dark/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
         {/* Category tag */}
-        <div className="absolute top-4 left-4 bg-primary-pink text-white text-xs font-semibold uppercase tracking-wider px-3 py-1 z-10">
+        <div className="absolute top-4 left-4 bg-primary-teal text-white text-xs font-semibold uppercase tracking-wider px-3 py-1 z-10">
           {item.category}
         </div>
 
         {/* Hover arrow */}
-        <div className="absolute bottom-4 right-4 h-12 w-12 bg-primary-pink flex items-center justify-center opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-300 z-10">
+        <div className="absolute bottom-4 right-4 h-12 w-12 bg-primary-teal flex items-center justify-center opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-300 z-10">
           <ArrowRight className="h-5 w-5 text-white" />
         </div>
       </div>
 
       {/* Content */}
       <div className="p-8">
-        <h3 className="text-lg font-bold text-primary-dark leading-snug mb-3 group-hover:text-primary-pink transition-colors">
+        <h3 className="text-lg font-bold text-primary-dark leading-snug mb-3 group-hover:text-primary-teal transition-colors">
           {item.title}
         </h3>
         <p className="text-gray-500 text-sm leading-relaxed font-normal">
@@ -82,7 +82,7 @@ const CaseCard = ({ item, idx }) => {
       </div>
 
       {/* Bottom accent */}
-      <div className="absolute bottom-0 left-0 h-1 w-0 bg-primary-pink transition-all duration-500 group-hover:w-full" />
+      <div className="absolute bottom-0 left-0 h-1 w-0 bg-primary-teal transition-all duration-500 group-hover:w-full" />
     </motion.div>
   );
 };
@@ -95,14 +95,14 @@ const CaseStudies = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-end mb-16">
           <div>
             <div className="flex items-center gap-3 mb-4">
-              <div className="h-[2px] w-10 bg-primary-pink" />
-              <span className="text-primary-pink font-semibold uppercase tracking-widest text-sm">
+              <div className="h-[2px] w-10 bg-primary-teal" />
+              <span className="text-primary-teal font-semibold uppercase tracking-widest text-sm">
                 Case Studies
               </span>
             </div>
             <h2 className="text-4xl lg:text-5xl font-bold text-primary-dark leading-tight">
               Our Recent Work &<br />
-              <span className="text-primary-pink">Success Stories</span>
+              <span className="text-primary-teal">Success Stories</span>
             </h2>
           </div>
           <div className="lg:text-right">
@@ -136,7 +136,7 @@ const CaseStudies = () => {
             { count: '1000+', label: 'Happy Clients' },
           ].map((item, idx) => (
             <div key={idx} className="text-center border-r border-white/10 last:border-0">
-              <h4 className="text-4xl font-bold text-primary-pink mb-1">{item.count}</h4>
+              <h4 className="text-4xl font-bold text-primary-teal mb-1">{item.count}</h4>
               <p className="text-gray-400 text-xs font-semibold uppercase tracking-widest">{item.label}</p>
             </div>
           ))}

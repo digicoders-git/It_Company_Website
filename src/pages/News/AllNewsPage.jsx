@@ -204,16 +204,16 @@ const AllNewsPage = () => {
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.2 }}
-              className="inline-flex items-center gap-2 bg-primary-pink/20 px-5 py-2.5 rounded-sm mb-8"
+              className="inline-flex items-center gap-2 bg-primary-teal/20 px-5 py-2.5 rounded-sm mb-8"
             >
-              <span className="w-2 h-2 rounded-full bg-primary-pink animate-pulse" />
-              <span className="text-primary-pink text-sm font-bold uppercase tracking-wider">News & Insights</span>
+              <span className="w-2 h-2 rounded-full bg-primary-teal animate-pulse" />
+              <span className="text-primary-teal text-sm font-bold uppercase tracking-wider">News & Insights</span>
             </motion.div>
             
             {/* Heading */}
             <h1 className="text-4xl lg:text-5xl font-black text-white leading-tight mb-4">
               Latest News &<br />
-              <span className="text-primary-pink">Industry Updates</span>
+              <span className="text-primary-teal">Industry Updates</span>
             </h1>
             
             <p className="text-gray-300 text-base font-medium leading-relaxed">
@@ -233,8 +233,8 @@ const AllNewsPage = () => {
               transition={{ duration: 0.8 }}
             >
               <div className="flex items-center gap-2 mb-6">
-                <div className="h-[3px] w-10 bg-primary-pink" />
-                <span className="text-primary-pink font-bold uppercase tracking-widest text-sm">Featured Article</span>
+                <div className="h-[3px] w-10 bg-primary-teal" />
+                <span className="text-primary-teal font-bold uppercase tracking-widest text-sm">Featured Article</span>
               </div>
               
               <Link to={`/news/${featuredArticle.id}`} className="group block">
@@ -248,7 +248,7 @@ const AllNewsPage = () => {
                       />
                       <div className="absolute inset-0 bg-gradient-to-r from-transparent to-gray-900/90 lg:bg-gradient-to-t from-gray-900/90 to-transparent" />
                       <div className="absolute top-6 left-6 flex items-center gap-2">
-                        <div className="bg-primary-pink text-white text-xs font-black uppercase tracking-wider px-4 py-2 rounded-full flex items-center gap-2">
+                        <div className="bg-primary-teal text-white text-xs font-black uppercase tracking-wider px-4 py-2 rounded-full flex items-center gap-2">
                           <TrendingUp className="h-3 w-3" /> Featured
                         </div>
                         <div className="bg-white/20 backdrop-blur-sm text-white text-xs font-bold uppercase tracking-wider px-4 py-2 rounded-full">
@@ -270,7 +270,7 @@ const AllNewsPage = () => {
                         </span>
                       </div>
                       
-                      <h2 className="text-2xl lg:text-4xl font-black text-white leading-tight mb-4 group-hover:text-primary-pink transition-colors">
+                      <h2 className="text-2xl lg:text-4xl font-black text-white leading-tight mb-4 group-hover:text-primary-teal transition-colors">
                         {featuredArticle.title}
                       </h2>
                       
@@ -283,7 +283,7 @@ const AllNewsPage = () => {
                           <img
                             src={featuredArticle.authorAvatar}
                             alt={featuredArticle.author}
-                            className="w-12 h-12 rounded-full object-cover ring-2 ring-primary-pink"
+                            className="w-12 h-12 rounded-full object-cover ring-2 ring-primary-teal"
                           />
                           <div>
                             <span className="text-white font-bold block">{featuredArticle.author}</span>
@@ -291,7 +291,7 @@ const AllNewsPage = () => {
                           </div>
                         </div>
                         
-                        <span className="inline-flex items-center gap-2 bg-primary-pink text-white px-6 py-3 rounded-full font-bold text-sm uppercase tracking-wider group-hover:bg-white group-hover:text-primary-dark transition-all">
+                        <span className="inline-flex items-center gap-2 bg-primary-teal text-white px-6 py-3 rounded-full font-bold text-sm uppercase tracking-wider group-hover:bg-white group-hover:text-primary-dark transition-all">
                           Read Full Article <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
                         </span>
                       </div>
@@ -349,7 +349,7 @@ const AllNewsPage = () => {
                 placeholder="Search articles..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full bg-white border-2 border-gray-100 py-3.5 pl-5 pr-14 text-sm rounded-2xl focus:outline-none focus:border-primary-pink transition-all shadow-sm"
+                className="w-full bg-white border-2 border-gray-100 py-3.5 pl-5 pr-14 text-sm rounded-2xl focus:outline-none focus:border-primary-teal transition-all shadow-sm"
               />
               <Search className="absolute right-5 top-1/2 -translate-y-1/2 h-5 w-5 text-gray-400" />
             </motion.div>
@@ -412,7 +412,7 @@ const AllNewsPage = () => {
                             </div>
 
                             <Link to={`/news/${post.id}`}>
-                              <h3 className="text-lg md:text-xl font-black text-primary-dark leading-snug mb-3 group-hover:text-primary-pink transition-colors line-clamp-2">
+                              <h3 className="text-lg md:text-xl font-black text-primary-dark leading-snug mb-3 group-hover:text-primary-teal transition-colors line-clamp-2">
                                 {post.title}
                               </h3>
                             </Link>
@@ -426,7 +426,7 @@ const AllNewsPage = () => {
                               {post.tags.slice(0, 3).map((tag, tIdx) => (
                                 <span
                                   key={tIdx}
-                                  className="text-xs font-semibold text-gray-500 bg-gray-50 px-3 py-1 rounded-full hover:bg-primary-pink hover:text-white transition-colors cursor-pointer"
+                                  className="text-xs font-semibold text-gray-500 bg-gray-50 px-3 py-1 rounded-full hover:bg-primary-teal hover:text-white transition-colors cursor-pointer"
                                 >
                                   #{tag}
                                 </span>
@@ -445,15 +445,15 @@ const AllNewsPage = () => {
                             </div>
                             
                             <div className="flex items-center gap-3">
-                              <button className="p-2 text-gray-400 hover:text-primary-pink hover:bg-primary-pink/10 rounded-full transition-colors">
+                              <button className="p-2 text-gray-400 hover:text-primary-teal hover:bg-primary-teal/10 rounded-full transition-colors">
                                 <Bookmark className="h-4 w-4" />
                               </button>
-                              <button className="p-2 text-gray-400 hover:text-primary-pink hover:bg-primary-pink/10 rounded-full transition-colors">
+                              <button className="p-2 text-gray-400 hover:text-primary-teal hover:bg-primary-teal/10 rounded-full transition-colors">
                                 <Share2 className="h-4 w-4" />
                               </button>
                               <Link
                                 to={`/news/${post.id}`}
-                                className="inline-flex items-center gap-2 bg-primary-dark text-white px-5 py-2.5 rounded-full font-bold text-sm uppercase tracking-wider hover:bg-primary-pink transition-colors"
+                                className="inline-flex items-center gap-2 bg-primary-dark text-white px-5 py-2.5 rounded-full font-bold text-sm uppercase tracking-wider hover:bg-primary-teal transition-colors"
                               >
                                 Read More <ChevronRight className="h-4 w-4" />
                               </Link>
@@ -516,7 +516,7 @@ const AllNewsPage = () => {
                     placeholder="Search..."
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
-                    className="w-full border-2 border-gray-100 py-3 pl-5 pr-12 text-sm rounded-xl focus:outline-none focus:border-primary-pink transition-colors"
+                    className="w-full border-2 border-gray-100 py-3 pl-5 pr-12 text-sm rounded-xl focus:outline-none focus:border-primary-teal transition-colors"
                   />
                   <Search className="absolute right-4 top-1/2 -translate-y-1/2 h-5 w-5 text-gray-400" />
                 </div>
@@ -530,7 +530,7 @@ const AllNewsPage = () => {
                 className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100"
               >
                 <h4 className="text-lg font-black text-primary-dark mb-6 flex items-center gap-2">
-                  <Tag className="h-5 w-5 text-primary-pink" />
+                  <Tag className="h-5 w-5 text-primary-teal" />
                   Categories
                 </h4>
                 <ul className="space-y-2">
@@ -540,7 +540,7 @@ const AllNewsPage = () => {
                         onClick={() => setActiveCategory(cat.name)}
                         className={`w-full flex items-center justify-between py-3 px-4 rounded-xl font-semibold text-sm transition-all ${
                           activeCategory === cat.name
-                            ? 'bg-gradient-to-r from-primary-dark to-primary-pink text-white shadow-lg'
+                            ? 'bg-gradient-to-r from-primary-dark to-primary-teal text-white shadow-lg'
                             : 'text-gray-600 hover:bg-gray-50 hover:text-primary-dark'
                         }`}
                       >
@@ -567,7 +567,7 @@ const AllNewsPage = () => {
                 className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100"
               >
                 <h4 className="text-lg font-black text-primary-dark mb-6 flex items-center gap-2">
-                  <TrendingUp className="h-5 w-5 text-primary-pink" />
+                  <TrendingUp className="h-5 w-5 text-primary-teal" />
                   Trending Now
                 </h4>
                 <ul className="space-y-4">
@@ -578,14 +578,14 @@ const AllNewsPage = () => {
                           <img
                             src={post.image}
                             alt={post.title}
-                            className="w-20 h-20 object-cover rounded-xl group-hover:ring-2 group-hover:ring-primary-pink transition-all"
+                            className="w-20 h-20 object-cover rounded-xl group-hover:ring-2 group-hover:ring-primary-teal transition-all"
                           />
-                          <span className="absolute -top-2 -left-2 w-6 h-6 bg-primary-pink text-white text-xs font-black flex items-center justify-center rounded-full">
+                          <span className="absolute -top-2 -left-2 w-6 h-6 bg-primary-teal text-white text-xs font-black flex items-center justify-center rounded-full">
                             {idx + 1}
                           </span>
                         </div>
                         <div>
-                          <h5 className="text-sm font-bold text-primary-dark leading-snug mb-2 group-hover:text-primary-pink transition-colors line-clamp-2">
+                          <h5 className="text-sm font-bold text-primary-dark leading-snug mb-2 group-hover:text-primary-teal transition-colors line-clamp-2">
                             {post.title}
                           </h5>
                           <span className="text-xs text-gray-400 font-semibold uppercase tracking-wider">
@@ -606,7 +606,7 @@ const AllNewsPage = () => {
                 className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100"
               >
                 <h4 className="text-lg font-black text-primary-dark mb-6 flex items-center gap-2">
-                  <Tag className="h-5 w-5 text-primary-pink" />
+                  <Tag className="h-5 w-5 text-primary-teal" />
                   Popular Tags
                 </h4>
                 <div className="flex flex-wrap gap-2">
@@ -630,11 +630,11 @@ const AllNewsPage = () => {
                 className="bg-gradient-to-br from-primary-dark to-[#2a2a4a] p-8 rounded-2xl text-white relative overflow-hidden"
               >
                 {/* Decorative Elements */}
-                <div className="absolute top-0 right-0 w-32 h-32 bg-primary-pink/20 rounded-full blur-2xl" />
+                <div className="absolute top-0 right-0 w-32 h-32 bg-primary-teal/20 rounded-full blur-2xl" />
                 <div className="absolute bottom-0 left-0 w-24 h-24 bg-blue-500/20 rounded-full blur-2xl" />
                 
                 <div className="relative z-10">
-                  <div className="w-14 h-14 bg-primary-pink rounded-2xl flex items-center justify-center mb-4">
+                  <div className="w-14 h-14 bg-primary-teal rounded-2xl flex items-center justify-center mb-4">
                     <Zap className="h-7 w-7 text-white" />
                   </div>
                   <h4 className="text-xl font-black mb-2">Stay Informed</h4>
@@ -644,9 +644,9 @@ const AllNewsPage = () => {
                   <input
                     type="email"
                     placeholder="Enter your email"
-                    className="w-full bg-white/10 backdrop-blur-sm border border-white/20 py-3.5 px-5 text-white text-sm placeholder:text-gray-400 rounded-xl focus:outline-none focus:border-primary-pink transition-colors mb-4"
+                    className="w-full bg-white/10 backdrop-blur-sm border border-white/20 py-3.5 px-5 text-white text-sm placeholder:text-gray-400 rounded-xl focus:outline-none focus:border-primary-teal transition-colors mb-4"
                   />
-                  <button className="w-full bg-primary-pink text-white py-3.5 rounded-xl font-bold uppercase tracking-wider hover:bg-white hover:text-primary-dark transition-colors flex items-center justify-center gap-2">
+                  <button className="w-full bg-primary-teal text-white py-3.5 rounded-xl font-bold uppercase tracking-wider hover:bg-white hover:text-primary-dark transition-colors flex items-center justify-center gap-2">
                     Subscribe Now <ArrowRight className="h-4 w-4" />
                   </button>
                   <p className="text-gray-400 text-xs mt-4 text-center">

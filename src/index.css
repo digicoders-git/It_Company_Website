@@ -2,8 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;600;700&display=swap');
 
 @theme {
-  --color-primary-pink: #E64A7C;
-  --color-primary-teal: #00B5AD;
+  --color-primary-lime: #C4D600;
+  --color-primary-teal: #00BFA5;
   --color-primary-dark: #1A1A1A;
   --color-secondary: #2D2D2D;
   --color-background: #F5F7F9;
@@ -30,7 +30,7 @@
     @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
   }
   .btn-primary {
-    @apply bg-primary-pink text-white px-8 py-3 rounded-none font-bold transition-all hover:bg-[#c73868] active:scale-95 flex items-center justify-center gap-2 uppercase tracking-wider text-sm;
+    @apply bg-primary-teal text-white px-8 py-3 rounded-none font-bold transition-all hover:bg-[#00a38c] active:scale-95 flex items-center justify-center gap-2 uppercase tracking-wider text-sm;
   }
   .btn-outline {
     @apply border-2 border-white text-white px-8 py-3 rounded-none font-bold transition-all hover:bg-white hover:text-primary-dark active:scale-95 flex items-center justify-center gap-2 uppercase tracking-wider text-sm;

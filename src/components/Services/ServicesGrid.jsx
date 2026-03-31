@@ -43,7 +43,7 @@ const ServicesGrid = () => {
       </div>
 
       {/* Decorative shapes */}
-      <div className="absolute top-0 left-0 w-64 h-64 bg-primary-pink/5 rounded-full blur-3xl" />
+      <div className="absolute top-0 left-0 w-64 h-64 bg-primary-teal/5 rounded-full blur-3xl" />
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-primary-teal/5 rounded-full blur-3xl" />
 
       <div className="container relative z-10">
@@ -55,8 +55,8 @@ const ServicesGrid = () => {
             viewport={{ once: true }}
           >
             <div className="flex items-center gap-3 mb-4">
-              <div className="h-[2px] w-10 bg-primary-pink" />
-              <span className="text-primary-pink font-semibold uppercase tracking-widest text-sm">
+              <div className="h-[2px] w-10 bg-primary-teal" />
+              <span className="text-primary-teal font-semibold uppercase tracking-widest text-sm">
                 Industry Insights
               </span>
             </div>
@@ -73,10 +73,10 @@ const ServicesGrid = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-            <p className="text-gray-300 text-lg leading-relaxed font-normal italic border-l-4 border-primary-pink pl-6 mb-8">
+            <p className="text-gray-300 text-lg leading-relaxed font-normal italic border-l-4 border-primary-teal pl-6 mb-8">
               "We provide Analysis and Commentary on the latest developments in the IT industry, including new technologies, market trends, and emerging best practices."
             </p>
-            <button className="btn-primary shadow-lg shadow-primary-pink/30">
+            <button className="btn-primary shadow-lg shadow-primary-teal/30">
               Proven IT Solutions <ArrowRight className="h-4 w-4" />
             </button>
           </motion.div>
@@ -95,7 +95,7 @@ const ServicesGrid = () => {
                 transition={{ delay: idx * 0.1 }}
                 className="flex items-center gap-5 group"
               >
-                <div className="flex h-16 w-16 shrink-0 items-center justify-center bg-white/5 border border-white/10 text-primary-teal transition-all duration-300 group-hover:bg-primary-pink group-hover:text-white group-hover:border-primary-pink">
+                <div className="flex h-16 w-16 shrink-0 items-center justify-center bg-white/5 border border-white/10 text-primary-teal transition-all duration-300 group-hover:bg-primary-teal group-hover:text-white group-hover:border-primary-teal">
                   <Icon className="h-7 w-7" />
                 </div>
                 <div>

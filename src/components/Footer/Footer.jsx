@@ -1,5 +1,6 @@
 import React from 'react';
-import { Phone, Mail, MapPin, Send, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { Phone, Mail, MapPin, ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const Facebook = (p) => (
@@ -27,15 +28,29 @@ const Linkedin = (p) => (
   </svg>
 );
 
-const quickLinks = ['Home', 'About Us', 'IT Solutions', 'Case Studies', 'News', 'Contact Us'];
-const services = ['Data Infrastructure', 'IT Cloud Integration', 'IT Startup Projects', 'Product Engineering', 'Business Security', 'IT Consulting'];
+const quickLinks = [
+  { label: 'Home', path: '/' },
+  { label: 'About Us', path: '/about' },
+  { label: 'IT Solutions', path: '/services' },
+  { label: 'Clients', path: '/clients' },
+  { label: 'Products', path: '/products' },
+  { label: 'News', path: '/news' },
+  { label: 'Contact Us', path: '/contact' }
+];
+
+const services = [
+  { label: 'Website Development', path: '/services/website-development' },
+  { label: 'Mobile App Development', path: '/services/mobile-app-development' },
+  { label: 'Software Development', path: '/services/software-development' },
+  { label: 'Digital Marketing', path: '/services/digital-marketing' }
+];
 
 const Footer = () => {
   return (
     <footer className="relative overflow-hidden bg-[#111111] pt-24 pb-0 text-white">
       {/* Decorative shapes */}
-      <div className="absolute top-0 right-0 w-80 h-80 rounded-full bg-primary-pink/5 blur-3xl pointer-events-none" />
-      <div className="absolute bottom-0 left-0 w-96 h-96 rounded-full bg-primary-teal/5 blur-3xl pointer-events-none" />
+      <div className="absolute top-0 right-0 w-80 h-80 rounded-full bg-primary-teal/5 blur-3xl pointer-events-none" />
+      <div className="absolute bottom-0 left-0 w-96 h-96 rounded-full bg-primary-lime/5 blur-3xl pointer-events-none" />
 
       <div className="container relative z-10">
         <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-4 pb-16 border-b border-white/10">
@@ -44,16 +59,10 @@ const Footer = () => {
           <div>
             {/* Logo */}
             <div className="flex items-center gap-2 mb-6">
-              <svg width="32" height="32" viewBox="0 0 40 40" fill="none">
-                <path d="M12 28L28 12" stroke="#E64A7C" strokeWidth="6" strokeLinecap="round" />
-                <path d="M12 18L22 8" stroke="#E64A7C" strokeWidth="6" strokeLinecap="round" />
-                <path d="M20 32L30 22" stroke="#E64A7C" strokeWidth="6" strokeLinecap="round" />
-                <path d="M6 22L10 18" stroke="#E64A7C" strokeWidth="6" strokeLinecap="round" />
-              </svg>
-              <span className="text-2xl font-bold tracking-tight text-white">Zentec</span>
+              <img src="/image.png" alt="EcomSyncify" className="h-10 w-auto" />
             </div>
 
-            <p className="text-gray-400 text-sm font-medium leading-relaxed mb-8">
+            <p className="text-white text-sm font-medium leading-relaxed mb-8">
               Through our focus on innovation and efficiency, we provide results that matter. Our team of experts works closely with you to understand your unique challenges.
             </p>
 
@@ -63,7 +72,7 @@ const Footer = () => {
                   key={idx}
                   href="#"
                   whileHover={{ scale: 1.1, backgroundColor: '#E64A7C' }}
-                  className="flex h-10 w-10 items-center justify-center border border-white/10 text-gray-400 hover:text-white transition-colors"
+                  className="flex h-10 w-10 items-center justify-center border border-white/10 text-white hover:text-white transition-colors"
                 >
                   <Icon className="h-4 w-4" />
                 </motion.a>
@@ -75,18 +84,18 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-bold text-white mb-6 pb-4 border-b border-white/10 relative">
               Quick Links
-              <span className="absolute bottom-0 left-0 h-[2px] w-10 bg-primary-pink" />
+              <span className="absolute bottom-0 left-0 h-[2px] w-10 bg-primary-teal" />
             </h4>
             <ul className="flex flex-col gap-3">
               {quickLinks.map((link, idx) => (
                 <li key={idx}>
-                  <a
-                    href="#"
-                    className="flex items-center gap-2 text-gray-400 text-sm font-medium hover:text-primary-pink hover:gap-3 transition-all duration-200"
+                  <Link
+                    to={link.path}
+                    className="flex items-center gap-2 text-white text-sm font-medium hover:text-primary-teal hover:gap-3 transition-all duration-200"
                   >
                     <ArrowRight className="h-3 w-3 shrink-0" />
-                    {link}
-                  </a>
+                    {link.label}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -101,13 +110,13 @@ const Footer = () => {
             <ul className="flex flex-col gap-3">
               {services.map((service, idx) => (
                 <li key={idx}>
-                  <a
-                    href="#"
-                    className="flex items-center gap-2 text-gray-400 text-sm font-medium hover:text-primary-pink hover:gap-3 transition-all duration-200"
+                  <Link
+                    to={service.path}
+                    className="flex items-center gap-2 text-white text-sm font-medium hover:text-primary-teal hover:gap-3 transition-all duration-200"
                   >
                     <ArrowRight className="h-3 w-3 shrink-0" />
-                    {service}
-                  </a>
+                    {service.label}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -117,48 +126,39 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-black text-white mb-6 pb-4 border-b border-white/10 relative">
               Contact Info
-              <span className="absolute bottom-0 left-0 h-[2px] w-10 bg-primary-pink" />
+              <span className="absolute bottom-0 left-0 h-[2px] w-10 bg-primary-teal" />
             </h4>
             <ul className="flex flex-col gap-4 mb-8">
               <li className="flex items-start gap-3">
-                <MapPin className="h-5 w-5 shrink-0 text-primary-pink mt-0.5" />
-                <span className="text-gray-400 text-sm font-medium">123 Street, New York, USA</span>
+                <MapPin className="h-5 w-5 shrink-0 text-primary-teal mt-0.5" />
+                <span className="text-white text-sm font-medium">EcomSyncify Technologies LLP
+
+P-53 / VK Residency Haldharu,
+Surat, Gujarat, India - 394305</span>
               </li>
               <li className="flex items-center gap-3">
-                <Phone className="h-5 w-5 shrink-0 text-primary-pink" />
-                <a href="tel:+156984538" className="text-gray-400 text-sm font-medium hover:text-primary-pink transition-colors">
-                  +1 56984538
+                <Phone className="h-5 w-5 shrink-0 text-primary-teal" />
+                <a href="tel:+156984538" className="text-white text-sm font-medium hover:text-primary-teal transition-colors">
+                  +91 7275646711
                 </a>
               </li>
               <li className="flex items-center gap-3">
-                <Mail className="h-5 w-5 shrink-0 text-primary-pink" />
-                <a href="mailto:info@zentec.com" className="text-gray-400 text-sm font-medium hover:text-primary-pink transition-colors">
-                  info@zentec.com
+                <Mail className="h-5 w-5 shrink-0 text-primary-teal" />
+                <a href="mailto:info@EcomSyncify .com" className="text-white text-sm font-medium hover:text-primary-teal transition-colors">
+                  support@ecomsyncify .com
                 </a>
               </li>
             </ul>
 
-            {/* Newsletter */}
-            <p className="text-gray-400 text-sm font-medium mb-4">Subscribe to our newsletter:</p>
-            <div className="relative">
-              <input
-                type="email"
-                placeholder="Your email address"
-                className="w-full bg-white/5 border border-white/10 py-3 pl-4 pr-14 text-white text-sm placeholder:text-gray-500 focus:outline-none focus:border-primary-pink transition-colors"
-              />
-              <button className="absolute right-0 top-0 h-full w-12 bg-primary-pink flex items-center justify-center hover:bg-[#c73868] transition-colors">
-                <Send className="h-4 w-4 rotate-45" />
-              </button>
-            </div>
           </div>
         </div>
 
         {/* Copyright */}
-        <div className="py-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-gray-500 font-bold uppercase tracking-widest">
-          <span>© 2026 Zentec — IT Solutions & Services. All Rights Reserved.</span>
+        <div className="py-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-gray-500 font-semibold uppercase tracking-widest">
+          <span>© 2026 EcomSyncify  — Creafted with ❤️ by <a href="https://digicoders.in/" className="text-primary-teal">Team Digicoders</a> </span>
           <div className="flex items-center gap-6">
-            <a href="#" className="hover:text-primary-pink transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-primary-pink transition-colors">Terms of Use</a>
+            <Link to="/privacy-policy" className="hover:text-primary-teal transition-colors">Privacy Policy</Link>
+            <Link to="/terms-of-service" className="hover:text-primary-teal transition-colors">Terms of Service</Link>
           </div>
         </div>
       </div>

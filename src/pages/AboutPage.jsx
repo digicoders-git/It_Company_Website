@@ -45,7 +45,7 @@ const AboutPage = () => {
     {
       year: '2001',
       title: 'Company Founded',
-      description: 'Zentec was established with a vision to revolutionize IT solutions in the industry.',
+      description: 'EcomSyncify  was established with a vision to revolutionize IT solutions in the industry.',
     },
     {
       year: '2008',
@@ -108,18 +108,18 @@ const AboutPage = () => {
             transition={{ duration: 0.8 }}
             className="text-center max-w-3xl mx-auto"
           >
-            <div className="inline-flex items-center gap-2 bg-primary-pink/10 px-4 py-2 mb-4">
-              <div className="h-2 w-2 bg-primary-pink rounded-full animate-pulse" />
-              <span className="text-primary-pink font-bold uppercase tracking-wider text-xs">
-                About Zentec
+            <div className="inline-flex items-center gap-2 bg-primary-teal/10 px-4 py-2 mb-4">
+              <div className="h-2 w-2 bg-primary-teal rounded-full animate-pulse" />
+              <span className="text-primary-teal font-bold uppercase tracking-wider text-xs">
+                About EcomSyncify 
               </span>
             </div>
             <h1 className="text-4xl lg:text-5xl font-black text-white leading-tight mb-4">
               Transforming Business Through<br />
-              <span className="text-primary-pink">IT Innovation</span>
+              <span className="text-primary-teal">IT Innovation</span>
             </h1>
             <p className="text-gray-300 text-base font-medium leading-relaxed">
-              For over 25 years, Zentec has been at the forefront of IT solutions, helping businesses worldwide achieve digital transformation and sustainable growth.
+              For over 25 years, EcomSyncify  has been at the forefront of IT solutions, helping businesses worldwide achieve digital transformation and sustainable growth.
             </p>
           </motion.div>
         </div>
@@ -143,7 +143,7 @@ const AboutPage = () => {
                 className="w-full object-cover shadow-2xl"
                 style={{ height: '450px' }}
               />
-              <div className="absolute -bottom-6 -right-6 w-48 h-48 border-4 border-primary-pink/20" />
+              <div className="absolute -bottom-6 -right-6 w-48 h-48 border-4 border-primary-teal/20" />
               <div className="absolute -top-6 -left-6 w-40 h-40 border-4 border-primary-teal/20" />
             </motion.div>
 
@@ -154,20 +154,20 @@ const AboutPage = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <div className="inline-flex items-center gap-2 bg-primary-pink/10 px-3 py-1.5 mb-4">
-                <div className="h-1.5 w-1.5 bg-primary-pink rounded-full" />
-                <span className="text-primary-pink font-bold uppercase tracking-wider text-xs">
+              <div className="inline-flex items-center gap-2 bg-primary-teal/10 px-3 py-1.5 mb-4">
+                <div className="h-1.5 w-1.5 bg-primary-teal rounded-full" />
+                <span className="text-primary-teal font-bold uppercase tracking-wider text-xs">
                   Our Journey
                 </span>
               </div>
 
               <h2 className="text-3xl lg:text-4xl font-black text-primary-dark leading-tight mb-5">
                 Building Trust Through<br />
-                <span className="text-primary-pink">Excellence</span>
+                <span className="text-primary-teal">Excellence</span>
               </h2>
 
               <p className="text-gray-600 text-sm leading-relaxed font-medium mb-3">
-                Founded in 2001, Zentec started with a simple mission: to provide world-class IT solutions that empower businesses to thrive in the digital age. What began as a small team of passionate technologists has grown into a global powerhouse serving over 1000 enterprise clients across 50+ countries.
+                Founded in 2001, EcomSyncify  started with a simple mission: to provide world-class IT solutions that empower businesses to thrive in the digital age. What began as a small team of passionate technologists has grown into a global powerhouse serving over 1000 enterprise clients across 50+ countries.
               </p>
 
               <p className="text-gray-600 text-sm leading-relaxed font-medium mb-6">
@@ -189,13 +189,13 @@ const AboutPage = () => {
                     transition={{ delay: idx * 0.1 }}
                     className="flex items-start gap-2"
                   >
-                    <CheckCircle2 className="h-4 w-4 shrink-0 text-primary-pink mt-0.5" />
+                    <CheckCircle2 className="h-4 w-4 shrink-0 text-primary-teal mt-0.5" />
                     <span className="text-gray-700 font-medium text-sm">{item}</span>
                   </motion.li>
                 ))}
               </ul>
 
-              <button className="btn-primary shadow-lg shadow-primary-pink/30">
+              <button className="btn-primary shadow-lg shadow-primary-teal/30">
                 Learn More <ArrowRight className="h-4 w-4" />
               </button>
             </motion.div>
@@ -207,15 +207,15 @@ const AboutPage = () => {
       <section className="py-16 lg:py-20 bg-[#F5F7F9]">
         <div className="container">
           <div className="text-center max-w-2xl mx-auto mb-12">
-            <div className="inline-flex items-center gap-2 bg-primary-pink/10 px-3 py-1.5 mb-3">
-              <div className="h-1.5 w-1.5 bg-primary-pink rounded-full" />
-              <span className="text-primary-pink font-bold uppercase tracking-wider text-xs">
+            <div className="inline-flex items-center gap-2 bg-primary-teal/10 px-3 py-1.5 mb-3">
+              <div className="h-1.5 w-1.5 bg-primary-teal rounded-full" />
+              <span className="text-primary-teal font-bold uppercase tracking-wider text-xs">
                 Our Foundation
               </span>
             </div>
             <h2 className="text-3xl lg:text-4xl font-black text-primary-dark leading-tight">
               Mission, Vision &<br />
-              <span className="text-primary-pink">Values</span>
+              <span className="text-primary-teal">Values</span>
             </h2>
           </div>
 
@@ -227,8 +227,8 @@ const AboutPage = () => {
                 onClick={() => setActiveTab(tab)}
                 className={`px-6 py-2.5 font-black uppercase tracking-wider text-xs transition-all duration-300 ${
                   activeTab === tab
-                    ? 'bg-primary-pink text-white shadow-lg shadow-primary-pink/30'
-                    : 'border-2 border-gray-200 text-gray-600 hover:border-primary-pink'
+                    ? 'bg-primary-teal text-white shadow-lg shadow-primary-teal/30'
+                    : 'border-2 border-gray-200 text-gray-600 hover:border-primary-teal'
                 }`}
               >
                 {tab.charAt(0).toUpperCase() + tab.slice(1)}
@@ -250,7 +250,7 @@ const AboutPage = () => {
                 <p className="text-gray-600 text-base leading-relaxed font-medium mb-4">
                   To empower businesses worldwide by delivering innovative, reliable, and scalable IT solutions that drive digital transformation, enhance operational efficiency, and create sustainable competitive advantages in an ever-evolving technological landscape.
                 </p>
-                <div className="h-1 w-16 bg-primary-pink mx-auto" />
+                <div className="h-1 w-16 bg-primary-teal mx-auto" />
               </div>
             )}
 
@@ -276,8 +276,8 @@ const AboutPage = () => {
                       transition={{ delay: idx * 0.1 }}
                       className="bg-white p-6 shadow-lg hover:shadow-xl transition-shadow"
                     >
-                      <div className="h-12 w-12 bg-primary-pink/10 rounded-lg flex items-center justify-center mb-3">
-                        <Icon className="h-6 w-6 text-primary-pink" />
+                      <div className="h-12 w-12 bg-primary-teal/10 rounded-lg flex items-center justify-center mb-3">
+                        <Icon className="h-6 w-6 text-primary-teal" />
                       </div>
                       <h4 className="text-lg font-black text-primary-dark mb-2">{value.title}</h4>
                       <p className="text-gray-600 text-sm leading-relaxed font-medium">{value.description}</p>
@@ -294,15 +294,15 @@ const AboutPage = () => {
       <section className="py-16 lg:py-20 bg-white">
         <div className="container">
           <div className="text-center max-w-2xl mx-auto mb-12">
-            <div className="inline-flex items-center gap-2 bg-primary-pink/10 px-3 py-1.5 mb-3">
-              <div className="h-1.5 w-1.5 bg-primary-pink rounded-full" />
-              <span className="text-primary-pink font-bold uppercase tracking-wider text-xs">
+            <div className="inline-flex items-center gap-2 bg-primary-teal/10 px-3 py-1.5 mb-3">
+              <div className="h-1.5 w-1.5 bg-primary-teal rounded-full" />
+              <span className="text-primary-teal font-bold uppercase tracking-wider text-xs">
                 Leadership Team
               </span>
             </div>
             <h2 className="text-3xl lg:text-4xl font-black text-primary-dark leading-tight">
               Meet Our<br />
-              <span className="text-primary-pink">Expert Team</span>
+              <span className="text-primary-teal">Expert Team</span>
             </h2>
             <p className="mt-4 text-gray-600 font-medium text-sm">
               Experienced professionals dedicated to delivering excellence in every project.
@@ -325,10 +325,10 @@ const AboutPage = () => {
                     alt={member.name}
                     className="w-full h-56 object-cover transition-transform duration-700 group-hover:scale-110"
                   />
-                  <div className="absolute inset-0 bg-primary-pink/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <div className="absolute inset-0 bg-primary-teal/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </div>
                 <h4 className="text-base font-black text-primary-dark mb-1">{member.name}</h4>
-                <p className="text-primary-pink font-bold text-xs uppercase tracking-wider mb-2">
+                <p className="text-primary-teal font-bold text-xs uppercase tracking-wider mb-2">
                   {member.role}
                 </p>
                 <p className="text-gray-600 text-xs font-medium">{member.bio}</p>
@@ -342,15 +342,15 @@ const AboutPage = () => {
       <section className="py-16 lg:py-20 bg-[#F5F7F9]">
         <div className="container">
           <div className="text-center max-w-2xl mx-auto mb-12">
-            <div className="inline-flex items-center gap-2 bg-primary-pink/10 px-3 py-1.5 mb-3">
-              <div className="h-1.5 w-1.5 bg-primary-pink rounded-full" />
-              <span className="text-primary-pink font-bold uppercase tracking-wider text-xs">
+            <div className="inline-flex items-center gap-2 bg-primary-teal/10 px-3 py-1.5 mb-3">
+              <div className="h-1.5 w-1.5 bg-primary-teal rounded-full" />
+              <span className="text-primary-teal font-bold uppercase tracking-wider text-xs">
                 Our Expertise
               </span>
             </div>
             <h2 className="text-3xl lg:text-4xl font-black text-primary-dark leading-tight">
               Technical<br />
-              <span className="text-primary-pink">Expertise</span>
+              <span className="text-primary-teal">Expertise</span>
             </h2>
           </div>
 
@@ -366,7 +366,7 @@ const AboutPage = () => {
               >
                 <div className="flex items-center justify-between mb-2">
                   <h4 className="text-base font-black text-primary-dark">{skill.name}</h4>
-                  <span className="text-primary-pink font-black text-base">{skill.percentage}%</span>
+                  <span className="text-primary-teal font-black text-base">{skill.percentage}%</span>
                 </div>
                 <div className="h-2.5 bg-gray-200 overflow-hidden">
                   <motion.div
@@ -374,7 +374,7 @@ const AboutPage = () => {
                     whileInView={{ width: `${skill.percentage}%` }}
                     viewport={{ once: true }}
                     transition={{ duration: 1.5, delay: idx * 0.1 }}
-                    className="h-full bg-gradient-to-r from-primary-pink to-primary-teal"
+                    className="h-full bg-gradient-to-r from-primary-teal to-primary-teal"
                   />
                 </div>
               </motion.div>
@@ -387,15 +387,15 @@ const AboutPage = () => {
       <section className="py-16 lg:py-20 bg-white">
         <div className="container">
           <div className="text-center max-w-2xl mx-auto mb-12">
-            <div className="inline-flex items-center gap-2 bg-primary-pink/10 px-3 py-1.5 mb-3">
-              <div className="h-1.5 w-1.5 bg-primary-pink rounded-full" />
-              <span className="text-primary-pink font-bold uppercase tracking-wider text-xs">
+            <div className="inline-flex items-center gap-2 bg-primary-teal/10 px-3 py-1.5 mb-3">
+              <div className="h-1.5 w-1.5 bg-primary-teal rounded-full" />
+              <span className="text-primary-teal font-bold uppercase tracking-wider text-xs">
                 Our History
               </span>
             </div>
             <h2 className="text-3xl lg:text-4xl font-black text-primary-dark leading-tight">
               Journey Through<br />
-              <span className="text-primary-pink">Time</span>
+              <span className="text-primary-teal">Time</span>
             </h2>
           </div>
 
@@ -412,7 +412,7 @@ const AboutPage = () => {
                 {/* Content */}
                 <div className="flex-1">
                   <div className="bg-[#F5F7F9] p-6 hover:shadow-lg transition-shadow">
-                    <span className="text-primary-pink font-black text-xl">{item.year}</span>
+                    <span className="text-primary-teal font-black text-xl">{item.year}</span>
                     <h4 className="text-lg font-black text-primary-dark mt-2 mb-2">{item.title}</h4>
                     <p className="text-gray-600 font-medium text-sm">{item.description}</p>
                   </div>
@@ -420,9 +420,9 @@ const AboutPage = () => {
 
                 {/* Timeline dot */}
                 <div className="flex flex-col items-center">
-                  <div className="h-5 w-5 bg-primary-pink rounded-full border-4 border-white shadow-lg" />
+                  <div className="h-5 w-5 bg-primary-teal rounded-full border-4 border-white shadow-lg" />
                   {idx !== timeline.length - 1 && (
-                    <div className="w-1 h-20 bg-gradient-to-b from-primary-pink to-transparent mt-2" />
+                    <div className="w-1 h-20 bg-gradient-to-b from-primary-teal to-transparent mt-2" />
                   )}
                 </div>
 
@@ -455,8 +455,8 @@ const AboutPage = () => {
                   className="text-center"
                 >
                   <div className="flex justify-center mb-3">
-                    <div className="h-14 w-14 bg-primary-pink/10 rounded-lg flex items-center justify-center">
-                      <Icon className="h-7 w-7 text-primary-pink" />
+                    <div className="h-14 w-14 bg-primary-teal/10 rounded-lg flex items-center justify-center">
+                      <Icon className="h-7 w-7 text-primary-teal" />
                     </div>
                   </div>
                   <h4 className="text-3xl font-black text-white mb-2">{stat.count}</h4>
@@ -469,7 +469,7 @@ const AboutPage = () => {
       </section>
 
       {/* CTA */}
-      <section className="py-16 lg:py-20 bg-primary-pink">
+      <section className="py-16 lg:py-20 bg-primary-teal">
         <div className="container text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -481,15 +481,15 @@ const AboutPage = () => {
               Ready To Partner With Us?
             </h2>
             <p className="text-white/80 text-base font-medium mb-8">
-              Let's discuss how Zentec can help transform your business through innovative IT solutions.
+              Let's discuss how EcomSyncify  can help transform your business through innovative IT solutions.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <button className="bg-white text-primary-pink px-8 py-4 font-black uppercase tracking-wider text-sm hover:bg-primary-dark hover:text-white transition-all duration-300">
+              <button className="bg-white text-primary-teal px-8 py-4 font-black uppercase tracking-wider text-sm hover:bg-primary-dark hover:text-white transition-all duration-300">
                 Get Free Consultation <ArrowRight className="h-4 w-4 inline ml-2" />
               </button>
               <a
                 href="tel:5003692580"
-                className="border-2 border-white text-white px-8 py-4 font-black uppercase tracking-wider text-sm hover:bg-white hover:text-primary-pink transition-all duration-300"
+                className="border-2 border-white text-white px-8 py-4 font-black uppercase tracking-wider text-sm hover:bg-white hover:text-primary-teal transition-all duration-300"
               >
                 Call Us Now
               </a>

@@ -15,7 +15,7 @@ const featureCards = [
     title: 'IT Solutions',
     description: 'A wide range of services such as software development, data analysis, and cybersecurity solutions.',
     image: 'https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&q=80&w=800',
-    color: 'bg-primary-pink',
+    color: 'bg-primary-teal',
     featured: true,
   },
   {
@@ -37,10 +37,10 @@ const Features = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="inline-flex items-center gap-2 bg-primary-pink/10 px-4 py-2 mb-4"
+            className="inline-flex items-center gap-2 bg-primary-teal/10 px-4 py-2 mb-4"
           >
-            <div className="h-2 w-2 bg-primary-pink rounded-full animate-pulse" />
-            <span className="text-primary-pink font-semibold uppercase tracking-wider text-xs">
+            <div className="h-2 w-2 bg-primary-teal rounded-full animate-pulse" />
+            <span className="text-primary-teal font-semibold uppercase tracking-wider text-xs">
               What We Offer
             </span>
           </motion.div>
@@ -67,7 +67,7 @@ const Features = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: idx * 0.15 }}
                 className={`group relative overflow-hidden bg-white shadow-lg transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl ${
-                  card.featured ? 'ring-2 ring-primary-pink' : ''
+                  card.featured ? 'ring-2 ring-primary-teal' : ''
                 }`}
               >
                 {/* Image with Icon Overlay */}
@@ -90,7 +90,7 @@ const Features = () => {
                   </div>
 
                   {card.featured && (
-                    <div className="absolute top-4 right-4 bg-primary-pink text-white text-xs font-semibold uppercase tracking-wider px-3 py-1.5">
+                    <div className="absolute top-4 right-4 bg-primary-teal text-white text-xs font-semibold uppercase tracking-wider px-3 py-1.5">
                       Popular
                     </div>
                   )}
@@ -108,8 +108,8 @@ const Features = () => {
                     whileHover={{ x: 5 }}
                     className={`inline-flex h-11 w-11 items-center justify-center rounded-full border-2 transition-all duration-300 ${
                       card.featured
-                        ? 'border-primary-pink bg-primary-pink text-white'
-                        : 'border-gray-200 group-hover:border-primary-pink group-hover:bg-primary-pink group-hover:text-white'
+                        ? 'border-primary-teal bg-primary-teal text-white'
+                        : 'border-gray-200 group-hover:border-primary-teal group-hover:bg-primary-teal group-hover:text-white'
                     }`}
                   >
                     <ArrowRight className="h-5 w-5" />
@@ -117,7 +117,7 @@ const Features = () => {
                 </div>
 
                 {/* Bottom accent line */}
-                <div className="absolute bottom-0 left-0 h-1 w-0 bg-primary-pink transition-all duration-500 group-hover:w-full" />
+                <div className="absolute bottom-0 left-0 h-1 w-0 bg-primary-teal transition-all duration-500 group-hover:w-full" />
               </motion.div>
             );
           })}

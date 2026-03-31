@@ -36,15 +36,15 @@ const Blog = () => {
         {/* Header */}
         <div className="text-center max-w-2xl mx-auto mb-16">
           <div className="flex items-center justify-center gap-3 mb-4">
-            <div className="h-[2px] w-10 bg-primary-pink" />
-            <span className="text-primary-pink font-bold uppercase tracking-widest text-sm">
+            <div className="h-[2px] w-10 bg-primary-teal" />
+            <span className="text-primary-teal font-bold uppercase tracking-widest text-sm">
               Latest News
             </span>
-            <div className="h-[2px] w-10 bg-primary-pink" />
+            <div className="h-[2px] w-10 bg-primary-teal" />
           </div>
           <h2 className="text-4xl lg:text-5xl font-black text-primary-dark leading-tight">
             Latest News &{' '}
-            <span className="text-primary-pink">Updates</span>
+            <span className="text-primary-teal">Updates</span>
           </h2>
           <p className="mt-4 text-gray-500 font-medium leading-relaxed">
             Stay up to date with the latest trends, insights, and news from the IT industry.
@@ -69,7 +69,7 @@ const Blog = () => {
                   alt={post.title}
                   className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
-                <div className="absolute top-4 left-4 bg-primary-pink text-white text-xs font-black uppercase tracking-wider px-3 py-1">
+                <div className="absolute top-4 left-4 bg-primary-teal text-white text-xs font-black uppercase tracking-wider px-3 py-1">
                   {post.category}
                 </div>
               </div>
@@ -86,7 +86,7 @@ const Blog = () => {
                   </span>
                 </div>
 
-                <h3 className="text-lg font-black text-primary-dark leading-snug mb-3 group-hover:text-primary-pink transition-colors">
+                <h3 className="text-lg font-black text-primary-dark leading-snug mb-3 group-hover:text-primary-teal transition-colors">
                   {post.title}
                 </h3>
                 <p className="text-gray-500 text-sm leading-relaxed font-medium mb-6">
@@ -95,14 +95,14 @@ const Blog = () => {
 
                 <a
                   href="#"
-                  className="inline-flex items-center gap-2 text-primary-pink font-black text-sm uppercase tracking-wider hover-line"
+                  className="inline-flex items-center gap-2 text-primary-teal font-black text-sm uppercase tracking-wider hover-line"
                 >
                   Read More <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </a>
               </div>
 
               {/* Bottom line */}
-              <div className="h-1 w-0 bg-primary-pink transition-all duration-500 group-hover:w-full" />
+              <div className="h-1 w-0 bg-primary-teal transition-all duration-500 group-hover:w-full" />
             </motion.article>
           ))}
         </div>

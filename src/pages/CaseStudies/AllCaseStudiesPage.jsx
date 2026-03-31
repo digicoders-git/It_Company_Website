@@ -113,11 +113,11 @@ const CaseStudyCard = ({ caseStudy, idx }) => {
       <div className="relative h-64 overflow-hidden bg-gray-200">
         {!imageLoaded && !imageError && (
           <div className="absolute inset-0 flex items-center justify-center bg-gray-100">
-            <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary-pink"></div>
+            <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary-teal"></div>
           </div>
         )}
         {imageError && (
-          <div className="absolute inset-0 flex flex-col items-center justify-center bg-gradient-to-br from-primary-dark to-primary-pink">
+          <div className="absolute inset-0 flex flex-col items-center justify-center bg-gradient-to-br from-primary-dark to-primary-teal">
             <ImageIcon className="h-12 w-12 text-white/50 mb-2" />
             <span className="text-white/70 text-sm font-bold">{caseStudy.category}</span>
           </div>
@@ -135,14 +135,14 @@ const CaseStudyCard = ({ caseStudy, idx }) => {
         <div className="absolute inset-0 bg-gradient-to-t from-primary-dark/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
         {/* Category Badge */}
-        <div className="absolute top-4 left-4 bg-primary-pink text-white text-xs font-black uppercase tracking-wider px-3 py-1 z-10">
+        <div className="absolute top-4 left-4 bg-primary-teal text-white text-xs font-black uppercase tracking-wider px-3 py-1 z-10">
           {caseStudy.category}
         </div>
 
         {/* Hover Arrow */}
         <Link
           to={`/case-studies/${caseStudy.id}`}
-          className="absolute bottom-4 right-4 h-12 w-12 bg-primary-pink flex items-center justify-center opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-300 z-10"
+          className="absolute bottom-4 right-4 h-12 w-12 bg-primary-teal flex items-center justify-center opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-300 z-10"
         >
           <ArrowRight className="h-5 w-5 text-white" />
         </Link>
@@ -161,7 +161,7 @@ const CaseStudyCard = ({ caseStudy, idx }) => {
         </div>
 
         <Link to={`/case-studies/${caseStudy.id}`}>
-          <h3 className="text-lg font-black text-primary-dark leading-snug mb-3 group-hover:text-primary-pink transition-colors">
+          <h3 className="text-lg font-black text-primary-dark leading-snug mb-3 group-hover:text-primary-teal transition-colors">
             {caseStudy.title}
           </h3>
         </Link>
@@ -184,7 +184,7 @@ const CaseStudyCard = ({ caseStudy, idx }) => {
       </div>
 
       {/* Bottom Accent */}
-      <div className="h-1 w-0 bg-primary-pink transition-all duration-500 group-hover:w-full" />
+      <div className="h-1 w-0 bg-primary-teal transition-all duration-500 group-hover:w-full" />
     </motion.article>
   );
 };
@@ -213,15 +213,15 @@ const AllCaseStudiesPage = () => {
             className="text-center max-w-3xl mx-auto"
           >
             <div className="flex items-center justify-center gap-3 mb-4">
-              <div className="h-[2px] w-10 bg-primary-pink" />
-              <span className="text-primary-pink font-bold uppercase tracking-widest text-sm">
+              <div className="h-[2px] w-10 bg-primary-teal" />
+              <span className="text-primary-teal font-bold uppercase tracking-widest text-sm">
                 Case Studies
               </span>
-              <div className="h-[2px] w-10 bg-primary-pink" />
+              <div className="h-[2px] w-10 bg-primary-teal" />
             </div>
             <h1 className="text-5xl lg:text-6xl font-black text-white leading-tight mb-6">
               Our Success Stories &<br />
-              <span className="text-primary-pink">Client Projects</span>
+              <span className="text-primary-teal">Client Projects</span>
             </h1>
             <p className="text-gray-300 text-lg font-medium leading-relaxed">
               Explore our portfolio of successful IT projects delivered across various industries and sectors worldwide.
@@ -243,8 +243,8 @@ const AllCaseStudiesPage = () => {
                 onClick={() => setActiveCategory(category)}
                 className={`px-6 py-3 font-bold uppercase tracking-wider text-xs transition-all duration-300 ${
                   activeCategory === category
-                    ? 'bg-primary-pink text-white shadow-lg shadow-primary-pink/30'
-                    : 'border-2 border-gray-200 text-gray-600 hover:border-primary-pink hover:text-primary-pink'
+                    ? 'bg-primary-teal text-white shadow-lg shadow-primary-teal/30'
+                    : 'border-2 border-gray-200 text-gray-600 hover:border-primary-teal hover:text-primary-teal'
                 }`}
               >
                 {category}
@@ -294,7 +294,7 @@ const AllCaseStudiesPage = () => {
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.1 }}
               >
-                <h4 className="text-5xl font-black text-primary-pink mb-2">{stat.count}</h4>
+                <h4 className="text-5xl font-black text-primary-teal mb-2">{stat.count}</h4>
                 <p className="text-gray-400 text-xs font-bold uppercase tracking-widest">{stat.label}</p>
               </motion.div>
             ))}
@@ -303,7 +303,7 @@ const AllCaseStudiesPage = () => {
       </section>
 
       {/* CTA */}
-      <section className="section-padding bg-primary-pink">
+      <section className="section-padding bg-primary-teal">
         <div className="container text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -317,7 +317,7 @@ const AllCaseStudiesPage = () => {
             <p className="text-white/80 text-lg font-medium mb-10">
               Let's discuss how we can help transform your business with innovative IT solutions.
             </p>
-            <button className="bg-white text-primary-pink px-8 py-4 font-black uppercase tracking-wider text-sm hover:bg-primary-dark hover:text-white transition-all duration-300">
+            <button className="bg-white text-primary-teal px-8 py-4 font-black uppercase tracking-wider text-sm hover:bg-primary-dark hover:text-white transition-all duration-300">
               Start Your Project <ArrowRight className="h-4 w-4 inline ml-2" />
             </button>
           </motion.div>

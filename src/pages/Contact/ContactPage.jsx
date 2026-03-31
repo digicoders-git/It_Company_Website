@@ -47,21 +47,21 @@ const ContactPage = () => {
     {
       icon: MapPin,
       title: 'Visit Our Office',
-      details: ['123 Business Street, Suite 500', 'New York, NY 10001', 'United States'],
+      details: ['EcomSyncify Technologies LLP P-53 / VK Residency Haldharu, Surat, Gujarat, India - 394305'],
       color: 'bg-gradient-to-br from-blue-500 to-blue-600',
       hoverColor: 'hover:bg-gradient-to-br hover:from-blue-600 hover:to-blue-700',
     },
     {
       icon: Phone,
       title: 'Call Us Directly',
-      details: ['+1 (500) 369-2580', '+1 (500) 369-2581', 'Mon-Fri: 9AM - 6PM EST'],
+      details: ['+91 7275646711'],
       color: 'bg-gradient-to-br from-pink-500 to-pink-600',
       hoverColor: 'hover:bg-gradient-to-br hover:from-pink-600 hover:to-pink-700',
     },
     {
       icon: Mail,
       title: 'Email Us',
-      details: ['info@zentec.com', 'support@zentec.com', 'sales@zentec.com'],
+      details: ['support@ecomsyncify .com'],
       color: 'bg-gradient-to-br from-teal-500 to-teal-600',
       hoverColor: 'hover:bg-gradient-to-br hover:from-teal-600 hover:to-teal-700',
     },
@@ -76,7 +76,7 @@ const ContactPage = () => {
 
   const faqs = [
     {
-      question: 'What services does Zentec provide?',
+      question: 'What services does EcomSyncify  provide?',
       answer: 'We offer comprehensive IT solutions including cloud integration, cybersecurity, data infrastructure, product engineering, and IT consulting services. Our solutions are tailored to meet your specific business needs and goals.',
     },
     {
@@ -140,16 +140,16 @@ const ContactPage = () => {
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.2 }}
-              className="inline-flex items-center gap-2 bg-primary-pink/20 px-5 py-2.5 rounded-sm mb-8"
+              className="inline-flex items-center gap-2 bg-primary-teal/20 px-5 py-2.5 rounded-sm mb-8"
             >
-              <span className="w-2 h-2 rounded-full bg-primary-pink animate-pulse" />
-              <span className="text-primary-pink text-sm font-bold uppercase tracking-wider">Get In Touch</span>
+              <span className="w-2 h-2 rounded-full bg-primary-teal animate-pulse" />
+              <span className="text-primary-teal text-sm font-bold uppercase tracking-wider">Get In Touch</span>
             </motion.div>
             
             {/* Heading */}
             <h1 className="text-4xl lg:text-5xl font-black text-white leading-tight mb-4">
               Contact Us For<br />
-              <span className="text-primary-pink">IT Solutions</span>
+              <span className="text-primary-teal">IT Solutions</span>
             </h1>
             
             <p className="text-gray-300 text-base font-medium leading-relaxed">
@@ -216,14 +216,14 @@ const ContactPage = () => {
             >
               <div className="bg-white rounded-3xl p-8 lg:p-10 shadow-xl border border-gray-100">
                 <div className="flex items-center gap-3 mb-2">
-                  <div className="h-[3px] w-10 bg-primary-pink" />
-                  <span className="text-primary-pink font-bold uppercase tracking-widest text-sm">
+                  <div className="h-[3px] w-10 bg-primary-teal" />
+                  <span className="text-primary-teal font-bold uppercase tracking-widest text-sm">
                     Send Message
                   </span>
                 </div>
                 
                 <h2 className="text-3xl lg:text-4xl font-black text-primary-dark leading-tight mb-4">
-                  Let's Start a <span className="text-primary-pink">Conversation</span>
+                  Let's Start a <span className="text-primary-teal">Conversation</span>
                 </h2>
                 
                 <p className="text-gray-600 leading-relaxed font-medium mb-8">
@@ -245,7 +245,7 @@ const ContactPage = () => {
                           onChange={handleChange}
                           required
                           placeholder="John Doe"
-                          className="w-full border-2 border-gray-100 py-4 pl-12 pr-4 text-sm rounded-xl focus:outline-none focus:border-primary-pink transition-colors bg-gray-50 focus:bg-white"
+                          className="w-full border-2 border-gray-100 py-4 pl-12 pr-4 text-sm rounded-xl focus:outline-none focus:border-primary-teal transition-colors bg-gray-50 focus:bg-white"
                         />
                       </div>
                     </div>
@@ -263,7 +263,7 @@ const ContactPage = () => {
                           onChange={handleChange}
                           required
                           placeholder="john@company.com"
-                          className="w-full border-2 border-gray-100 py-4 pl-12 pr-4 text-sm rounded-xl focus:outline-none focus:border-primary-pink transition-colors bg-gray-50 focus:bg-white"
+                          className="w-full border-2 border-gray-100 py-4 pl-12 pr-4 text-sm rounded-xl focus:outline-none focus:border-primary-teal transition-colors bg-gray-50 focus:bg-white"
                         />
                       </div>
                     </div>
@@ -282,7 +282,7 @@ const ContactPage = () => {
                           value={formData.phone}
                           onChange={handleChange}
                           placeholder="+1 (555) 000-0000"
-                          className="w-full border-2 border-gray-100 py-4 pl-12 pr-4 text-sm rounded-xl focus:outline-none focus:border-primary-pink transition-colors bg-gray-50 focus:bg-white"
+                          className="w-full border-2 border-gray-100 py-4 pl-12 pr-4 text-sm rounded-xl focus:outline-none focus:border-primary-teal transition-colors bg-gray-50 focus:bg-white"
                         />
                       </div>
                     </div>
@@ -299,7 +299,7 @@ const ContactPage = () => {
                           value={formData.company}
                           onChange={handleChange}
                           placeholder="Your Company Name"
-                          className="w-full border-2 border-gray-100 py-4 pl-12 pr-4 text-sm rounded-xl focus:outline-none focus:border-primary-pink transition-colors bg-gray-50 focus:bg-white"
+                          className="w-full border-2 border-gray-100 py-4 pl-12 pr-4 text-sm rounded-xl focus:outline-none focus:border-primary-teal transition-colors bg-gray-50 focus:bg-white"
                         />
                       </div>
                     </div>
@@ -316,7 +316,7 @@ const ContactPage = () => {
                           value={formData.service}
                           onChange={handleChange}
                           required
-                          className="w-full border-2 border-gray-100 py-4 px-4 text-sm rounded-xl focus:outline-none focus:border-primary-pink transition-colors bg-gray-50 focus:bg-white appearance-none cursor-pointer"
+                          className="w-full border-2 border-gray-100 py-4 px-4 text-sm rounded-xl focus:outline-none focus:border-primary-teal transition-colors bg-gray-50 focus:bg-white appearance-none cursor-pointer"
                         >
                           <option value="">Select a Service</option>
                           {services.map((service) => (
@@ -340,7 +340,7 @@ const ContactPage = () => {
                           onChange={handleChange}
                           required
                           placeholder="How can we help?"
-                          className="w-full border-2 border-gray-100 py-4 pl-12 pr-4 text-sm rounded-xl focus:outline-none focus:border-primary-pink transition-colors bg-gray-50 focus:bg-white"
+                          className="w-full border-2 border-gray-100 py-4 pl-12 pr-4 text-sm rounded-xl focus:outline-none focus:border-primary-teal transition-colors bg-gray-50 focus:bg-white"
                         />
                       </div>
                     </div>
@@ -357,7 +357,7 @@ const ContactPage = () => {
                       required
                       rows="5"
                       placeholder="Tell us about your project, requirements, or questions..."
-                      className="w-full border-2 border-gray-100 py-4 px-4 text-sm rounded-xl focus:outline-none focus:border-primary-pink transition-colors resize-none bg-gray-50 focus:bg-white"
+                      className="w-full border-2 border-gray-100 py-4 px-4 text-sm rounded-xl focus:outline-none focus:border-primary-teal transition-colors resize-none bg-gray-50 focus:bg-white"
                     />
                   </div>
 
@@ -380,7 +380,7 @@ const ContactPage = () => {
 
                   <button
                     type="submit"
-                    className="w-full bg-gradient-to-r from-primary-dark to-primary-pink text-white py-4 rounded-xl font-bold uppercase tracking-wider hover:shadow-lg hover:shadow-primary-pink/30 transition-all flex items-center justify-center gap-2 group"
+                    className="w-full bg-gradient-to-r from-primary-dark to-primary-teal text-white py-4 rounded-xl font-bold uppercase tracking-wider hover:shadow-lg hover:shadow-primary-teal/30 transition-all flex items-center justify-center gap-2 group"
                   >
                     Send Message
                     <Send className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
@@ -400,12 +400,12 @@ const ContactPage = () => {
               {/* Quick Contact Card */}
               <div className="bg-gradient-to-br from-primary-dark to-[#2a2a4a] p-8 rounded-3xl text-white relative overflow-hidden">
                 {/* Decorative */}
-                <div className="absolute top-0 right-0 w-32 h-32 bg-primary-pink/20 rounded-full blur-2xl" />
+                <div className="absolute top-0 right-0 w-32 h-32 bg-primary-teal/20 rounded-full blur-2xl" />
                 <div className="absolute bottom-0 left-0 w-24 h-24 bg-blue-500/20 rounded-full blur-2xl" />
                 
                 <div className="relative z-10">
                   <div className="flex items-center gap-3 mb-6">
-                    <div className="w-14 h-14 bg-primary-pink rounded-2xl flex items-center justify-center">
+                    <div className="w-14 h-14 bg-primary-teal rounded-2xl flex items-center justify-center">
                       <HeadphonesIcon className="h-7 w-7 text-white" />
                     </div>
                     <div>
@@ -416,32 +416,32 @@ const ContactPage = () => {
                   
                   <div className="space-y-5">
                     <a href="tel:5003692580" className="flex items-center gap-4 p-4 bg-white/10 rounded-xl hover:bg-white/20 transition-colors group">
-                      <div className="w-12 h-12 bg-primary-pink rounded-xl flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
+                      <div className="w-12 h-12 bg-primary-teal rounded-xl flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
                         <Phone className="h-5 w-5 text-white" />
                       </div>
                       <div>
                         <p className="text-xs font-bold uppercase tracking-wider text-gray-400 mb-1">Call Us Now</p>
-                        <p className="text-lg font-black group-hover:text-primary-pink transition-colors">+1 (500) 369-2580</p>
+                        <p className="text-lg font-black group-hover:text-primary-teal transition-colors">+91 7275646711</p>
                       </div>
                     </a>
 
-                    <a href="mailto:info@zentec.com" className="flex items-center gap-4 p-4 bg-white/10 rounded-xl hover:bg-white/20 transition-colors group">
-                      <div className="w-12 h-12 bg-primary-pink rounded-xl flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
+                    <a href="mailto:info@EcomSyncify .com" className="flex items-center gap-4 p-4 bg-white/10 rounded-xl hover:bg-white/20 transition-colors group">
+                      <div className="w-12 h-12 bg-primary-teal rounded-xl flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
                         <Mail className="h-5 w-5 text-white" />
                       </div>
                       <div>
                         <p className="text-xs font-bold uppercase tracking-wider text-gray-400 mb-1">Email Us</p>
-                        <p className="text-lg font-black group-hover:text-primary-pink transition-colors">info@zentec.com</p>
+                        <p className="text-lg font-black group-hover:text-primary-teal transition-colors">support@ecomsyncify .com</p>
                       </div>
                     </a>
 
                     <a href="#" className="flex items-center gap-4 p-4 bg-white/10 rounded-xl hover:bg-white/20 transition-colors group">
-                      <div className="w-12 h-12 bg-primary-pink rounded-xl flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
+                      <div className="w-12 h-12 bg-primary-teal rounded-xl flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
                         <MessageCircle className="h-5 w-5 text-white" />
                       </div>
                       <div>
                         <p className="text-xs font-bold uppercase tracking-wider text-gray-400 mb-1">Live Chat</p>
-                        <p className="text-lg font-black group-hover:text-primary-pink transition-colors">Start Chat</p>
+                        <p className="text-lg font-black group-hover:text-primary-teal transition-colors">Start Chat</p>
                       </div>
                     </a>
                   </div>
@@ -449,7 +449,7 @@ const ContactPage = () => {
               </div>
 
               {/* Map */}
-              <div className="relative h-64 bg-gray-200 rounded-2xl overflow-hidden shadow-lg">
+              {/* <div className="relative h-64 bg-gray-200 rounded-2xl overflow-hidden shadow-lg">
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193595.15830869428!2d-74.11976373946229!3d40.69766374874431!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2s!4v1234567890123!5m2!1sen!2s"
                   width="100%"
@@ -458,17 +458,17 @@ const ContactPage = () => {
                   allowFullScreen=""
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  title="Zentec Location"
+                  title="EcomSyncify  Location"
                 />
                 <div className="absolute bottom-4 left-4 bg-white px-4 py-2 rounded-lg shadow-lg">
                   <p className="text-sm font-bold text-primary-dark">📍 New York, NY</p>
                 </div>
-              </div>
+              </div> */}
 
               {/* Business Hours */}
               <div className="bg-white p-6 rounded-2xl shadow-lg border border-gray-100">
                 <h3 className="text-lg font-black text-primary-dark mb-5 flex items-center gap-2">
-                  <Calendar className="h-5 w-5 text-primary-pink" />
+                  <Calendar className="h-5 w-5 text-primary-teal" />
                   Business Hours
                 </h3>
                 <div className="space-y-3">
@@ -506,13 +506,13 @@ const ContactPage = () => {
             className="text-center mb-16"
           >
             <div className="flex items-center justify-center gap-3 mb-4">
-              <div className="h-[3px] w-10 bg-primary-pink" />
-              <span className="text-primary-pink font-bold uppercase tracking-widest text-sm">FAQ</span>
-              <div className="h-[3px] w-10 bg-primary-pink" />
+              <div className="h-[3px] w-10 bg-primary-teal" />
+              <span className="text-primary-teal font-bold uppercase tracking-widest text-sm">FAQ</span>
+              <div className="h-[3px] w-10 bg-primary-teal" />
             </div>
             <h2 className="text-4xl lg:text-5xl font-black text-primary-dark leading-tight">
               Frequently Asked<br />
-              <span className="text-primary-pink">Questions</span>
+              <span className="text-primary-teal">Questions</span>
             </h2>
             <p className="text-gray-600 mt-4 max-w-xl mx-auto">Can't find what you're looking for? Reach out to our team directly.</p>
           </motion.div>
@@ -535,11 +535,11 @@ const ContactPage = () => {
                   className="w-full flex items-center justify-between p-6 text-left"
                 >
                   <h4 className="text-lg font-bold text-primary-dark pr-4 flex items-start gap-3">
-                    <span className="text-primary-pink shrink-0 font-black">Q{idx + 1}.</span>
+                    <span className="text-primary-teal shrink-0 font-black">Q{idx + 1}.</span>
                     {faq.question}
                   </h4>
                   <span className={`shrink-0 w-8 h-8 rounded-full flex items-center justify-center transition-colors ${
-                    openFaq === idx ? 'bg-primary-pink text-white rotate-180' : 'bg-gray-100 text-gray-600'
+                    openFaq === idx ? 'bg-primary-teal text-white rotate-180' : 'bg-gray-100 text-gray-600'
                   }`}>
                     <ChevronDown className="h-5 w-5" />
                   </span>
@@ -564,44 +564,7 @@ const ContactPage = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-primary-dark via-[#1a1a2e] to-primary-dark relative overflow-hidden">
-        {/* Background Effects */}
-        <div className="absolute inset-0">
-          <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary-pink/20 rounded-full blur-3xl" />
-          <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl" />
-        </div>
-
-        <div className="container relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center max-w-3xl mx-auto"
-          >
-            <h2 className="text-4xl lg:text-5xl font-black text-white leading-tight mb-6">
-              Ready to Transform Your
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-pink to-purple-400"> Business?</span>
-            </h2>
-            <p className="text-gray-300 text-lg font-medium mb-10">
-              Let's discuss how Zentec can help you achieve your IT goals. Schedule a free consultation with our experts today.
-            </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <button className="bg-gradient-to-r from-primary-pink to-pink-600 text-white px-10 py-5 rounded-full font-bold uppercase tracking-wider text-sm hover:shadow-lg hover:shadow-primary-pink/40 transition-all flex items-center gap-2 group">
-                <Calendar className="h-5 w-5" />
-                Schedule Free Consultation
-                <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
-              </button>
-              <a
-                href="tel:5003692580"
-                className="border-2 border-white/30 text-white px-10 py-5 rounded-full font-bold uppercase tracking-wider text-sm hover:bg-white hover:text-primary-dark transition-all flex items-center gap-2"
-              >
-                <Phone className="h-5 w-5" />
-                Call: +1 (500) 369-2580
-              </a>
-            </div>
-          </motion.div>
-        </div>
-      </section>
+      
     </>
   );
 };

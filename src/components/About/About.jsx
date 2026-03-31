@@ -27,17 +27,17 @@ const About = () => {
             <div className="relative overflow-hidden">
               <img
                 src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&q=80&w=900"
-                alt="About Zentec"
+                alt="About EcomSyncify "
                 className="w-full object-cover transition-transform duration-700 hover:scale-105"
                 style={{ height: '520px' }}
               />
-              {/* Pink overlay on hover */}
-              <div className="absolute inset-0 bg-primary-pink/10 opacity-0 hover:opacity-100 transition-opacity duration-500" />
+              {/* Teal overlay on hover */}
+              <div className="absolute inset-0 bg-primary-teal/10 opacity-0 hover:opacity-100 transition-opacity duration-500" />
             </div>
 
             {/* Decorative border box */}
-            <div className="absolute -bottom-6 -right-6 w-48 h-48 border-4 border-primary-pink z-0 hidden lg:block" />
-            <div className="absolute -top-6 -left-6 w-32 h-32 border-4 border-primary-teal/30 z-0 hidden lg:block" />
+            <div className="absolute -bottom-6 -right-6 w-48 h-48 border-4 border-primary-teal z-0 hidden lg:block" />
+            <div className="absolute -top-6 -left-6 w-32 h-32 border-4 border-primary-lime/30 z-0 hidden lg:block" />
 
             {/* Experience Badge */}
             <motion.div
@@ -45,7 +45,7 @@ const About = () => {
               whileInView={{ scale: 1, rotate: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.4, type: 'spring', stiffness: 200 }}
-              className="absolute -bottom-4 -right-4 lg:bottom-8 lg:right-8 z-10 bg-primary-pink text-white p-8 text-center shadow-2xl"
+              className="absolute -bottom-4 -right-4 lg:bottom-8 lg:right-8 z-10 bg-primary-teal text-white p-8 text-center shadow-2xl"
             >
               <span className="text-5xl font-black block leading-none">25+</span>
               <span className="text-xs font-black uppercase tracking-widest block mt-2 opacity-90">
@@ -62,15 +62,15 @@ const About = () => {
             transition={{ duration: 0.8 }}
           >
             <div className="flex items-center gap-3 mb-4">
-              <div className="h-[2px] w-10 bg-primary-pink" />
-              <span className="text-primary-pink font-semibold uppercase tracking-widest text-sm">
-                ZenTec — Welcome To IT Solutions
+              <div className="h-[2px] w-10 bg-primary-teal" />
+              <span className="text-primary-teal font-semibold uppercase tracking-widest text-sm">
+                EcomSyncify  — Welcome To IT Solutions
               </span>
             </div>
 
             <h2 className="text-4xl lg:text-5xl font-bold text-primary-dark leading-tight mb-6">
               Your Next Preferred<br />
-              <span className="text-primary-pink">IT Partner</span>
+              <span className="text-primary-teal">IT Partner</span>
             </h2>
 
             <p className="text-gray-500 text-base leading-relaxed mb-4 font-medium">
@@ -90,8 +90,8 @@ const About = () => {
                   transition={{ duration: 0.4, delay: idx * 0.08 }}
                   className="flex items-start gap-3 group"
                 >
-                  <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-primary-pink" />
-                  <span className="text-gray-700 font-medium text-sm leading-snug group-hover:text-primary-pink transition-colors">
+                  <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-primary-teal" />
+                  <span className="text-gray-700 font-medium text-sm leading-snug group-hover:text-primary-teal transition-colors">
                     {benefit}
                   </span>
                 </motion.li>
@@ -101,7 +101,7 @@ const About = () => {
             <motion.button
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.97 }}
-              className="btn-primary shadow-lg shadow-primary-pink/30"
+              className="btn-primary shadow-lg shadow-primary-teal/30"
             >
               Read More About Us <ArrowRight className="h-4 w-4" />
             </motion.button>
