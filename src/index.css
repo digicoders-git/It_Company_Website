@@ -1,26 +1,26 @@
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
 @theme {
-  --color-primary-lime: #C4D600;
-  --color-primary-teal: #00BFA5;
-  --color-primary-dark: #1A1A1A;
-  --color-secondary: #2D2D2D;
+  --color-primary-blue: #112a68;
+  --color-primary-dark: #112a68;
+  --color-secondary: #0a1a3f;
   --color-background: #F5F7F9;
+  --color-accent: #ffffff;
   
-  --font-google-sans: "Google Sans", sans-serif;
+  --font-poppins: "Poppins", sans-serif;
 }
 
 @layer base {
   html {
-    font-family: "Google Sans", sans-serif;
+    font-family: "Poppins", sans-serif;
   }
   body {
     @apply text-primary-dark bg-white overflow-x-hidden;
-    font-family: "Google Sans", sans-serif;
+    font-family: "Poppins", sans-serif;
   }
   h1, h2, h3, h4, h5, h6 {
-    font-family: "Google Sans", sans-serif;
+    font-family: "Poppins", sans-serif;
     @apply font-bold;
   }
 }
@@ -30,7 +30,7 @@
     @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
   }
   .btn-primary {
-    @apply bg-primary-teal text-white px-8 py-3 rounded-none font-bold transition-all hover:bg-[#00a38c] active:scale-95 flex items-center justify-center gap-2 uppercase tracking-wider text-sm;
+    @apply bg-primary-blue text-white px-8 py-3 rounded-none font-bold transition-all hover:bg-[#0d2050] active:scale-95 flex items-center justify-center gap-2 uppercase tracking-wider text-sm;
   }
   .btn-outline {
     @apply border-2 border-white text-white px-8 py-3 rounded-none font-bold transition-all hover:bg-white hover:text-primary-dark active:scale-95 flex items-center justify-center gap-2 uppercase tracking-wider text-sm;
@@ -87,7 +87,7 @@
   left: 0;
   width: 0;
   height: 2px;
-  background: #E64A7C;
+  background: #112a68;
   transition: width 0.3s ease;
 }
 .hover-line:hover::after { width: 100%; }
@@ -101,7 +101,7 @@
 .article-content h3 {
   font-size: 1.5rem;
   font-weight: 900;
-  color: #1A1A1A;
+  color: #112a68;
   margin-top: 2rem;
   margin-bottom: 1rem;
 }
@@ -109,7 +109,7 @@
 .article-content h4 {
   font-size: 1.25rem;
   font-weight: 800;
-  color: #1A1A1A;
+  color: #112a68;
   margin-top: 1.5rem;
   margin-bottom: 0.75rem;
 }
@@ -134,5 +134,5 @@
 
 .article-content strong {
   font-weight: 700;
-  color: #1A1A1A;
+  color: #112a68;
 }

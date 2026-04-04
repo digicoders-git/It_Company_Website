@@ -150,7 +150,7 @@ const CaseStudyDetailPage = () => {
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-4xl font-black text-primary-dark mb-4">Case Study Not Found</h1>
-          <Link to="/case-studies" className="text-primary-teal font-bold hover:underline">
+          <Link to="/case-studies" className="text-primary-blue font-bold hover:underline">
             Back to Case Studies
           </Link>
         </div>
@@ -175,11 +175,11 @@ const CaseStudyDetailPage = () => {
             className="max-w-4xl mx-auto"
           >
             <div className="flex items-center justify-center gap-3 mb-4">
-              <div className="h-[2px] w-10 bg-primary-teal" />
-              <span className="text-primary-teal font-bold uppercase tracking-widest text-sm">
+              <div className="h-[2px] w-10 bg-primary-blue" />
+              <span className="text-primary-blue font-bold uppercase tracking-widest text-sm">
                 {caseStudy.category}
               </span>
-              <div className="h-[2px] w-10 bg-primary-teal" />
+              <div className="h-[2px] w-10 bg-primary-blue" />
             </div>
             <h1 className="text-4xl lg:text-5xl font-black text-white leading-tight mb-6 text-center">
               {caseStudy.title}
@@ -188,15 +188,15 @@ const CaseStudyDetailPage = () => {
             {/* Meta Info */}
             <div className="flex flex-wrap items-center justify-center gap-6 text-gray-300 text-sm font-bold">
               <span className="flex items-center gap-2">
-                <User className="h-4 w-4 text-primary-teal" />
+                <User className="h-4 w-4 text-primary-blue" />
                 {caseStudy.client}
               </span>
               <span className="flex items-center gap-2">
-                <Tag className="h-4 w-4 text-primary-teal" />
+                <Tag className="h-4 w-4 text-primary-blue" />
                 {caseStudy.industry}
               </span>
               <span className="flex items-center gap-2">
-                <Calendar className="h-4 w-4 text-primary-teal" />
+                <Calendar className="h-4 w-4 text-primary-blue" />
                 {caseStudy.date}
               </span>
             </div>
@@ -219,7 +219,7 @@ const CaseStudyDetailPage = () => {
               className="w-full object-cover shadow-2xl"
               style={{ height: '500px' }}
             />
-            <div className="absolute -bottom-8 -right-8 w-64 h-64 border-4 border-primary-teal/20 hidden lg:block" />
+            <div className="absolute -bottom-8 -right-8 w-64 h-64 border-4 border-primary-blue/20 hidden lg:block" />
           </motion.div>
         </div>
       </section>
@@ -257,8 +257,8 @@ const CaseStudyDetailPage = () => {
             viewport={{ once: true }}
           >
             <div className="flex items-center gap-3 mb-4">
-              <div className="h-[2px] w-10 bg-primary-teal" />
-              <span className="text-primary-teal font-bold uppercase tracking-widest text-sm">
+              <div className="h-[2px] w-10 bg-primary-blue" />
+              <span className="text-primary-blue font-bold uppercase tracking-widest text-sm">
                 Project Overview
               </span>
             </div>
@@ -281,8 +281,8 @@ const CaseStudyDetailPage = () => {
               viewport={{ once: true }}
             >
               <div className="flex items-center gap-3 mb-4">
-                <div className="h-[2px] w-10 bg-primary-teal" />
-                <span className="text-primary-teal font-bold uppercase tracking-widest text-sm">
+                <div className="h-[2px] w-10 bg-primary-blue" />
+                <span className="text-primary-blue font-bold uppercase tracking-widest text-sm">
                   The Challenge
                 </span>
               </div>
@@ -293,7 +293,7 @@ const CaseStudyDetailPage = () => {
               <ul className="flex flex-col gap-3">
                 {caseStudy.challenge.points.map((point, idx) => (
                   <li key={idx} className="flex items-start gap-3">
-                    <CheckCircle2 className="h-5 w-5 shrink-0 text-primary-teal mt-0.5" />
+                    <CheckCircle2 className="h-5 w-5 shrink-0 text-primary-blue mt-0.5" />
                     <span className="text-gray-700 font-medium text-sm">{point}</span>
                   </li>
                 ))}
@@ -307,8 +307,8 @@ const CaseStudyDetailPage = () => {
               viewport={{ once: true }}
             >
               <div className="flex items-center gap-3 mb-4">
-                <div className="h-[2px] w-10 bg-primary-teal" />
-                <span className="text-primary-teal font-bold uppercase tracking-widest text-sm">
+                <div className="h-[2px] w-10 bg-primary-blue" />
+                <span className="text-primary-blue font-bold uppercase tracking-widest text-sm">
                   The Solution
                 </span>
               </div>
@@ -319,7 +319,7 @@ const CaseStudyDetailPage = () => {
               <ul className="flex flex-col gap-3">
                 {caseStudy.solution.points.map((point, idx) => (
                   <li key={idx} className="flex items-start gap-3">
-                    <CheckCircle2 className="h-5 w-5 shrink-0 text-primary-teal mt-0.5" />
+                    <CheckCircle2 className="h-5 w-5 shrink-0 text-primary-blue mt-0.5" />
                     <span className="text-gray-700 font-medium text-sm">{point}</span>
                   </li>
                 ))}
@@ -334,11 +334,11 @@ const CaseStudyDetailPage = () => {
         <div className="container">
           <div className="text-center max-w-2xl mx-auto mb-16">
             <div className="flex items-center justify-center gap-3 mb-4">
-              <div className="h-[2px] w-10 bg-primary-teal" />
-              <span className="text-primary-teal font-bold uppercase tracking-widest text-sm">
+              <div className="h-[2px] w-10 bg-primary-blue" />
+              <span className="text-primary-blue font-bold uppercase tracking-widest text-sm">
                 Results
               </span>
-              <div className="h-[2px] w-10 bg-primary-teal" />
+              <div className="h-[2px] w-10 bg-primary-blue" />
             </div>
             <h2 className="text-4xl font-black text-white leading-tight">
               Measurable Impact
@@ -358,8 +358,8 @@ const CaseStudyDetailPage = () => {
                   className="text-center"
                 >
                   <div className="flex justify-center mb-4">
-                    <div className="h-16 w-16 bg-primary-teal/20 flex items-center justify-center">
-                      <Icon className="h-8 w-8 text-primary-teal" />
+                    <div className="h-16 w-16 bg-primary-blue/20 flex items-center justify-center">
+                      <Icon className="h-8 w-8 text-primary-blue" />
                     </div>
                   </div>
                   <h4 className="text-4xl font-black text-white mb-2">{result.metric}</h4>
@@ -380,8 +380,8 @@ const CaseStudyDetailPage = () => {
             viewport={{ once: true }}
           >
             <div className="flex items-center gap-3 mb-4">
-              <div className="h-[2px] w-10 bg-primary-teal" />
-              <span className="text-primary-teal font-bold uppercase tracking-widest text-sm">
+              <div className="h-[2px] w-10 bg-primary-blue" />
+              <span className="text-primary-blue font-bold uppercase tracking-widest text-sm">
                 Technologies Used
               </span>
             </div>
@@ -394,7 +394,7 @@ const CaseStudyDetailPage = () => {
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
                   transition={{ delay: idx * 0.05 }}
-                  className="bg-[#F5F7F9] text-primary-dark font-bold text-sm px-6 py-3 uppercase tracking-wider hover:bg-primary-teal hover:text-white transition-colors"
+                  className="bg-[#F5F7F9] text-primary-dark font-bold text-sm px-6 py-3 uppercase tracking-wider hover:bg-primary-blue hover:text-white transition-colors"
                 >
                   {tech}
                 </motion.span>
@@ -413,7 +413,7 @@ const CaseStudyDetailPage = () => {
             viewport={{ once: true }}
             className="bg-white p-12 shadow-xl relative"
           >
-            <div className="absolute -top-6 -left-6 h-16 w-16 bg-primary-teal flex items-center justify-center text-white text-4xl font-black">
+            <div className="absolute -top-6 -left-6 h-16 w-16 bg-primary-blue flex items-center justify-center text-white text-4xl font-black">
               "
             </div>
             <p className="text-gray-600 text-xl leading-relaxed font-medium mb-8 italic">
@@ -427,7 +427,7 @@ const CaseStudyDetailPage = () => {
               />
               <div>
                 <h4 className="font-black text-primary-dark text-lg">{caseStudy.testimonial.author}</h4>
-                <p className="text-primary-teal text-sm font-bold">{caseStudy.testimonial.role}</p>
+                <p className="text-primary-blue text-sm font-bold">{caseStudy.testimonial.role}</p>
               </div>
             </div>
           </motion.div>
@@ -435,7 +435,7 @@ const CaseStudyDetailPage = () => {
       </section>
 
       {/* CTA */}
-      <section className="section-padding bg-primary-teal">
+      <section className="section-padding bg-primary-blue">
         <div className="container text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -450,12 +450,12 @@ const CaseStudyDetailPage = () => {
               Let's discuss how we can help you achieve similar results for your business.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <button className="bg-white text-primary-teal px-8 py-4 font-black uppercase tracking-wider text-sm hover:bg-primary-dark hover:text-white transition-all duration-300">
+              <button className="bg-white text-primary-blue px-8 py-4 font-black uppercase tracking-wider text-sm hover:bg-primary-dark hover:text-white transition-all duration-300">
                 Get Started <ArrowRight className="h-4 w-4 inline ml-2" />
               </button>
               <Link
                 to="/case-studies"
-                className="border-2 border-white text-white px-8 py-4 font-black uppercase tracking-wider text-sm hover:bg-white hover:text-primary-teal transition-all duration-300 inline-block"
+                className="border-2 border-white text-white px-8 py-4 font-black uppercase tracking-wider text-sm hover:bg-white hover:text-primary-blue transition-all duration-300 inline-block"
               >
                 View More Cases
               </Link>

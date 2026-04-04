@@ -57,11 +57,11 @@ const CaseStudyCard = ({ caseStudy, idx }) => {
       <div className="relative h-64 overflow-hidden bg-gray-200">
         {!imageLoaded && !imageError && (
           <div className="absolute inset-0 flex items-center justify-center bg-gray-100">
-            <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary-teal"></div>
+            <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary-blue"></div>
           </div>
         )}
         {imageError && (
-          <div className="absolute inset-0 flex flex-col items-center justify-center bg-gradient-to-br from-primary-dark to-primary-teal">
+          <div className="absolute inset-0 flex flex-col items-center justify-center bg-gradient-to-br from-primary-dark to-primary-blue">
             <Database className="h-12 w-12 text-white/50 mb-2" />
             <span className="text-white/70 text-sm font-bold">Data Infrastructure</span>
           </div>
@@ -79,7 +79,7 @@ const CaseStudyCard = ({ caseStudy, idx }) => {
         <div className="absolute inset-0 bg-gradient-to-t from-primary-dark/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
         {/* Category Badge */}
-        <div className="absolute top-4 left-4 bg-primary-teal text-white text-xs font-black uppercase tracking-wider px-3 py-1 z-10 flex items-center gap-1.5">
+        <div className="absolute top-4 left-4 bg-primary-blue text-white text-xs font-black uppercase tracking-wider px-3 py-1 z-10 flex items-center gap-1.5">
           <Database className="h-3 w-3" />
           Data Infrastructure
         </div>
@@ -87,7 +87,7 @@ const CaseStudyCard = ({ caseStudy, idx }) => {
         {/* Hover Arrow */}
         <Link
           to={`/case-studies/${caseStudy.id}`}
-          className="absolute bottom-4 right-4 h-12 w-12 bg-primary-teal flex items-center justify-center opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-300 z-10"
+          className="absolute bottom-4 right-4 h-12 w-12 bg-primary-blue flex items-center justify-center opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-300 z-10"
         >
           <ArrowRight className="h-5 w-5 text-white" />
         </Link>
@@ -106,7 +106,7 @@ const CaseStudyCard = ({ caseStudy, idx }) => {
         </div>
 
         <Link to={`/case-studies/${caseStudy.id}`}>
-          <h3 className="text-lg font-black text-primary-dark leading-snug mb-3 group-hover:text-primary-teal transition-colors">
+          <h3 className="text-lg font-black text-primary-dark leading-snug mb-3 group-hover:text-primary-blue transition-colors">
             {caseStudy.title}
           </h3>
         </Link>
@@ -129,7 +129,7 @@ const CaseStudyCard = ({ caseStudy, idx }) => {
       </div>
 
       {/* Bottom Accent */}
-      <div className="h-1 w-0 bg-primary-teal transition-all duration-500 group-hover:w-full" />
+      <div className="h-1 w-0 bg-primary-blue transition-all duration-500 group-hover:w-full" />
     </motion.article>
   );
 };
@@ -152,15 +152,15 @@ const DataInfrastructurePage = () => {
             className="text-center max-w-3xl mx-auto"
           >
             <div className="flex items-center justify-center gap-3 mb-4">
-              <div className="h-[2px] w-10 bg-primary-teal" />
-              <span className="text-primary-teal font-bold uppercase tracking-widest text-sm">
+              <div className="h-[2px] w-10 bg-primary-blue" />
+              <span className="text-primary-blue font-bold uppercase tracking-widest text-sm">
                 Data Infrastructure
               </span>
-              <div className="h-[2px] w-10 bg-primary-teal" />
+              <div className="h-[2px] w-10 bg-primary-blue" />
             </div>
             <h1 className="text-5xl lg:text-6xl font-black text-white leading-tight mb-6">
               Data Infrastructure<br />
-              <span className="text-primary-teal">Case Studies</span>
+              <span className="text-primary-blue">Case Studies</span>
             </h1>
             <p className="text-gray-300 text-lg font-medium leading-relaxed">
               Discover how we've helped enterprises build scalable, secure, and high-performance data infrastructure solutions.
@@ -201,11 +201,11 @@ const DataInfrastructurePage = () => {
             className="text-center max-w-2xl mx-auto mb-16"
           >
             <div className="flex items-center justify-center gap-3 mb-4">
-              <div className="h-[2px] w-10 bg-primary-teal" />
-              <span className="text-primary-teal font-bold uppercase tracking-widest text-sm">
+              <div className="h-[2px] w-10 bg-primary-blue" />
+              <span className="text-primary-blue font-bold uppercase tracking-widest text-sm">
                 What We Offer
               </span>
-              <div className="h-[2px] w-10 bg-primary-teal" />
+              <div className="h-[2px] w-10 bg-primary-blue" />
             </div>
             <h2 className="text-4xl font-black text-primary-dark leading-tight">
               Our Data Infrastructure Services
@@ -238,8 +238,8 @@ const DataInfrastructurePage = () => {
                 transition={{ delay: idx * 0.1 }}
                 className="bg-[#F5F7F9] p-8 text-center hover:bg-primary-dark group transition-all duration-500"
               >
-                <div className="h-16 w-16 bg-primary-teal/20 flex items-center justify-center mx-auto mb-6 group-hover:bg-primary-teal transition-colors">
-                  <service.icon className="h-8 w-8 text-primary-teal group-hover:text-white transition-colors" />
+                <div className="h-16 w-16 bg-primary-blue/20 flex items-center justify-center mx-auto mb-6 group-hover:bg-primary-blue transition-colors">
+                  <service.icon className="h-8 w-8 text-primary-blue group-hover:text-white transition-colors" />
                 </div>
                 <h3 className="text-xl font-black text-primary-dark mb-4 group-hover:text-white transition-colors">
                   {service.title}
@@ -270,7 +270,7 @@ const DataInfrastructurePage = () => {
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.1 }}
               >
-                <h4 className="text-5xl font-black text-primary-teal mb-2">{stat.count}</h4>
+                <h4 className="text-5xl font-black text-primary-blue mb-2">{stat.count}</h4>
                 <p className="text-gray-400 text-xs font-bold uppercase tracking-widest">{stat.label}</p>
               </motion.div>
             ))}
@@ -279,7 +279,7 @@ const DataInfrastructurePage = () => {
       </section>
 
       {/* CTA */}
-      <section className="section-padding bg-primary-teal">
+      <section className="section-padding bg-primary-blue">
         <div className="container text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -294,12 +294,12 @@ const DataInfrastructurePage = () => {
               Let's discuss how we can help you build a scalable, secure, and high-performance data infrastructure.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <button className="bg-white text-primary-teal px-8 py-4 font-black uppercase tracking-wider text-sm hover:bg-primary-dark hover:text-white transition-all duration-300">
+              <button className="bg-white text-primary-blue px-8 py-4 font-black uppercase tracking-wider text-sm hover:bg-primary-dark hover:text-white transition-all duration-300">
                 Get Started <ArrowRight className="h-4 w-4 inline ml-2" />
               </button>
               <Link
                 to="/case-studies"
-                className="border-2 border-white text-white px-8 py-4 font-black uppercase tracking-wider text-sm hover:bg-white hover:text-primary-teal transition-all duration-300 inline-block"
+                className="border-2 border-white text-white px-8 py-4 font-black uppercase tracking-wider text-sm hover:bg-white hover:text-primary-blue transition-all duration-300 inline-block"
               >
                 View All Case Studies
               </Link>

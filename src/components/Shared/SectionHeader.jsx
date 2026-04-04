@@ -9,7 +9,7 @@ const SectionHeader = ({ title, subtitle, accent, color = 'pink'}) => {
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.5 }}
         className={`mb-4 inline-block text-sm font-bold uppercase tracking-widest ${
-          color === 'pink' ? 'text-primary-teal' : 'text-primary-teal'
+          color === 'pink' ? 'text-primary-blue' : 'text-primary-blue'
         }`}
       >
         {accent}

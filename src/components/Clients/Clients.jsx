@@ -15,11 +15,11 @@ const Clients = () => {
     <section className="py-16 bg-white border-t border-b border-gray-100">
       <div className="container mb-10 text-center">
         <div className="flex items-center justify-center gap-3 mb-2">
-          <div className="h-[2px] w-10 bg-primary-teal" />
-          <span className="text-primary-teal font-semibold uppercase tracking-widest text-sm">
+          <div className="h-[2px] w-10 bg-primary-blue" />
+          <span className="text-primary-blue font-semibold uppercase tracking-widest text-sm">
             Our Trusted Partners
           </span>
-          <div className="h-[2px] w-10 bg-primary-teal" />
+          <div className="h-[2px] w-10 bg-primary-blue" />
         </div>
         <h3 className="text-2xl font-bold text-primary-dark">
           Trusted By Industry Leaders

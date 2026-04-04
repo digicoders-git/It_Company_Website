@@ -64,7 +64,7 @@ const Navbar = () => {
                 {item.submenu ? (
                   <span
                     className={`flex items-center gap-1 px-4 py-5 font-bold text-[14px] uppercase tracking-wide transition-colors cursor-pointer ${
-                      isActive(item.link) ? 'text-primary-teal' : 'text-[#333] hover:text-primary-teal'
+                      isActive(item.link) ? 'text-primary-blue' : 'text-[#333] hover:text-primary-blue'
                     }`}
                   >
                     {item.label}
@@ -74,7 +74,7 @@ const Navbar = () => {
                   <Link
                     to={item.link}
                     className={`flex items-center gap-1 px-4 py-5 font-bold text-[14px] uppercase tracking-wide transition-colors ${
-                      isActive(item.link) ? 'text-primary-teal' : 'text-[#333] hover:text-primary-teal'
+                      isActive(item.link) ? 'text-primary-blue' : 'text-[#333] hover:text-primary-blue'
                     }`}
                   >
                     {item.label}
@@ -83,15 +83,15 @@ const Navbar = () => {
 
                 {/* Dropdown */}
                 {item.submenu && (
-                  <div className="absolute top-full left-0 w-[240px] opacity-0 invisible translate-y-3 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 z-50 bg-white shadow-2xl border-t-2 border-primary-teal">
+                  <div className="absolute top-full left-0 w-[240px] opacity-0 invisible translate-y-3 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 z-50 bg-white shadow-2xl border-t-2 border-primary-blue">
                     <ul>
                       {item.submenu.map((sub, sIdx) => (
                         <li key={sIdx} className="border-b border-gray-50 last:border-0">
                           <Link
                             to={sub.link}
-                            className="flex items-center gap-2 px-6 py-3.5 text-[13px] font-bold text-gray-600 hover:text-primary-teal hover:pl-8 transition-all duration-200 uppercase tracking-wide"
+                            className="flex items-center gap-2 px-6 py-3.5 text-[13px] font-bold text-gray-600 hover:text-primary-blue hover:pl-8 transition-all duration-200 uppercase tracking-wide"
                           >
-                            <ArrowRight className="h-3 w-3 shrink-0 text-primary-teal" />
+                            <ArrowRight className="h-3 w-3 shrink-0 text-primary-blue" />
                             {sub.label}
                           </Link>
                         </li>
@@ -107,7 +107,7 @@ const Navbar = () => {
           <div className="hidden lg:flex items-center gap-4">
             <button
               onClick={() => setSearchOpen(!searchOpen)}
-              className="text-gray-500 hover:text-primary-teal transition-colors p-2"
+              className="text-gray-500 hover:text-primary-blue transition-colors p-2"
             >
               <Search className="h-5 w-5" />
             </button>
@@ -140,7 +140,7 @@ const Navbar = () => {
                     autoFocus
                     type="text"
                     placeholder="Search..."
-                    className="w-full border border-gray-200 py-3 pl-5 pr-12 text-sm focus:outline-none focus:border-primary-teal transition-colors"
+                    className="w-full border border-gray-200 py-3 pl-5 pr-12 text-sm focus:outline-none focus:border-primary-blue transition-colors"
                   />
                   <Search className="absolute right-4 top-1/2 -translate-y-1/2 h-5 w-5 text-gray-400" />
                 </div>
@@ -181,8 +181,8 @@ const Navbar = () => {
                     {item.submenu ? (
                       <>
                         <button
-                          className={`w-full flex items-center justify-between py-3 px-4 font-bold text-sm uppercase tracking-wide transition-colors hover:text-primary-teal hover:bg-gray-50 ${
-                            isActive(item.link) ? 'text-primary-teal' : 'text-primary-dark'
+                          className={`w-full flex items-center justify-between py-3 px-4 font-bold text-sm uppercase tracking-wide transition-colors hover:text-primary-blue hover:bg-gray-50 ${
+                            isActive(item.link) ? 'text-primary-blue' : 'text-primary-dark'
                           }`}
                           onClick={() => setOpenSubmenu(openSubmenu === idx ? null : idx)}
                         >
@@ -201,7 +201,7 @@ const Navbar = () => {
                                 <li key={sIdx}>
                                   <Link
                                     to={sub.link}
-                                    className="block py-2.5 px-4 text-xs font-bold text-gray-500 hover:text-primary-teal uppercase tracking-wide"
+                                    className="block py-2.5 px-4 text-xs font-bold text-gray-500 hover:text-primary-blue uppercase tracking-wide"
                                     onClick={() => setMobileOpen(false)}
                                   >
                                     {sub.label}
@@ -215,8 +215,8 @@ const Navbar = () => {
                     ) : (
                       <Link
                         to={item.link}
-                        className={`w-full flex items-center justify-between py-3 px-4 font-bold text-sm uppercase tracking-wide transition-colors hover:text-primary-teal hover:bg-gray-50 ${
-                          isActive(item.link) ? 'text-primary-teal' : 'text-primary-dark'
+                        className={`w-full flex items-center justify-between py-3 px-4 font-bold text-sm uppercase tracking-wide transition-colors hover:text-primary-blue hover:bg-gray-50 ${
+                          isActive(item.link) ? 'text-primary-blue' : 'text-primary-dark'
                         }`}
                         onClick={() => setMobileOpen(false)}
                       >

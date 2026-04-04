@@ -48,29 +48,21 @@ const ContactPage = () => {
       icon: MapPin,
       title: 'Visit Our Office',
       details: ['EcomSyncify Technologies LLP P-53 / VK Residency Haldharu, Surat, Gujarat, India - 394305'],
-      color: 'bg-gradient-to-br from-blue-500 to-blue-600',
-      hoverColor: 'hover:bg-gradient-to-br hover:from-blue-600 hover:to-blue-700',
     },
     {
       icon: Phone,
       title: 'Call Us Directly',
       details: ['+91 7275646711'],
-      color: 'bg-gradient-to-br from-pink-500 to-pink-600',
-      hoverColor: 'hover:bg-gradient-to-br hover:from-pink-600 hover:to-pink-700',
     },
     {
       icon: Mail,
       title: 'Email Us',
       details: ['support@ecomsyncify .com'],
-      color: 'bg-gradient-to-br from-teal-500 to-teal-600',
-      hoverColor: 'hover:bg-gradient-to-br hover:from-teal-600 hover:to-teal-700',
     },
     {
       icon: Clock,
       title: 'Working Hours',
       details: ['Mon - Fri: 9:00 AM - 6:00 PM', 'Saturday: 10:00 AM - 4:00 PM', 'Sunday: Closed'],
-      color: 'bg-gradient-to-br from-purple-500 to-purple-600',
-      hoverColor: 'hover:bg-gradient-to-br hover:from-purple-600 hover:to-purple-700',
     },
   ];
 
@@ -117,15 +109,15 @@ const ContactPage = () => {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-[#1a1a1a] pt-32 pb-24">
+      <section className="relative overflow-hidden bg-primary-dark pt-32 pb-24">
         {/* Decorative Circle Left */}
         <div className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/2">
-          <div className="w-[300px] h-[300px] lg:w-[400px] lg:h-[400px] rounded-full border-[40px] lg:border-[60px] border-[#2a2a2a] opacity-60" />
+          <div className="w-[300px] h-[300px] lg:w-[400px] lg:h-[400px] rounded-full border-[40px] lg:border-[60px] border-white/5 opacity-60" />
         </div>
         
         {/* Decorative Circle Right */}
         <div className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2">
-          <div className="w-[250px] h-[250px] lg:w-[350px] lg:h-[350px] rounded-full border-[35px] lg:border-[50px] border-[#2a2a2a] opacity-60" />
+          <div className="w-[250px] h-[250px] lg:w-[350px] lg:h-[350px] rounded-full border-[35px] lg:border-[50px] border-white/5 opacity-60" />
         </div>
 
         <div className="container relative z-10">
@@ -140,16 +132,16 @@ const ContactPage = () => {
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.2 }}
-              className="inline-flex items-center gap-2 bg-primary-teal/20 px-5 py-2.5 rounded-sm mb-8"
+              className="inline-flex items-center gap-2 bg-primary-blue/20 px-5 py-2.5 rounded-sm mb-8"
             >
-              <span className="w-2 h-2 rounded-full bg-primary-teal animate-pulse" />
-              <span className="text-primary-teal text-sm font-bold uppercase tracking-wider">Get In Touch</span>
+              <span className="w-2 h-2 rounded-full bg-primary-blue animate-pulse" />
+              <span className="text-primary-blue text-sm font-bold uppercase tracking-wider">Get In Touch</span>
             </motion.div>
             
             {/* Heading */}
             <h1 className="text-4xl lg:text-5xl font-black text-white leading-tight mb-4">
               Contact Us For<br />
-              <span className="text-primary-teal">IT Solutions</span>
+              <span className="text-primary-blue">IT Solutions</span>
             </h1>
             
             <p className="text-gray-300 text-base font-medium leading-relaxed">
@@ -175,10 +167,10 @@ const ContactPage = () => {
                 <motion.div
                   key={idx}
                   variants={itemVariants}
-                  className="group relative bg-white rounded-2xl p-8 border border-gray-100 hover:border-transparent hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 overflow-hidden"
+                  className="group relative bg-white rounded-2xl p-8 border border-gray-100 hover:border-primary-blue hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 overflow-hidden"
                 >
-                  {/* Background Gradient on Hover */}
-                  <div className={`absolute inset-0 ${info.color} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
+                  {/* Background on Hover */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary-blue to-[#0d2050] opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                   
                   <div className="relative z-10">
                     <div className="inline-flex h-16 w-16 items-center justify-center mb-6 bg-gray-50 group-hover:bg-white/20 transition-all duration-300 rounded-2xl shadow-lg">
@@ -216,14 +208,14 @@ const ContactPage = () => {
             >
               <div className="bg-white rounded-3xl p-8 lg:p-10 shadow-xl border border-gray-100">
                 <div className="flex items-center gap-3 mb-2">
-                  <div className="h-[3px] w-10 bg-primary-teal" />
-                  <span className="text-primary-teal font-bold uppercase tracking-widest text-sm">
+                  <div className="h-[3px] w-10 bg-primary-blue" />
+                  <span className="text-primary-blue font-bold uppercase tracking-widest text-sm">
                     Send Message
                   </span>
                 </div>
                 
                 <h2 className="text-3xl lg:text-4xl font-black text-primary-dark leading-tight mb-4">
-                  Let's Start a <span className="text-primary-teal">Conversation</span>
+                  Let's Start a <span className="text-primary-blue">Conversation</span>
                 </h2>
                 
                 <p className="text-gray-600 leading-relaxed font-medium mb-8">
@@ -245,7 +237,7 @@ const ContactPage = () => {
                           onChange={handleChange}
                           required
                           placeholder="John Doe"
-                          className="w-full border-2 border-gray-100 py-4 pl-12 pr-4 text-sm rounded-xl focus:outline-none focus:border-primary-teal transition-colors bg-gray-50 focus:bg-white"
+                          className="w-full border-2 border-gray-100 py-4 pl-12 pr-4 text-sm rounded-xl focus:outline-none focus:border-primary-blue transition-colors bg-gray-50 focus:bg-white"
                         />
                       </div>
                     </div>
@@ -263,7 +255,7 @@ const ContactPage = () => {
                           onChange={handleChange}
                           required
                           placeholder="john@company.com"
-                          className="w-full border-2 border-gray-100 py-4 pl-12 pr-4 text-sm rounded-xl focus:outline-none focus:border-primary-teal transition-colors bg-gray-50 focus:bg-white"
+                          className="w-full border-2 border-gray-100 py-4 pl-12 pr-4 text-sm rounded-xl focus:outline-none focus:border-primary-blue transition-colors bg-gray-50 focus:bg-white"
                         />
                       </div>
                     </div>
@@ -282,7 +274,7 @@ const ContactPage = () => {
                           value={formData.phone}
                           onChange={handleChange}
                           placeholder="+1 (555) 000-0000"
-                          className="w-full border-2 border-gray-100 py-4 pl-12 pr-4 text-sm rounded-xl focus:outline-none focus:border-primary-teal transition-colors bg-gray-50 focus:bg-white"
+                          className="w-full border-2 border-gray-100 py-4 pl-12 pr-4 text-sm rounded-xl focus:outline-none focus:border-primary-blue transition-colors bg-gray-50 focus:bg-white"
                         />
                       </div>
                     </div>
@@ -299,7 +291,7 @@ const ContactPage = () => {
                           value={formData.company}
                           onChange={handleChange}
                           placeholder="Your Company Name"
-                          className="w-full border-2 border-gray-100 py-4 pl-12 pr-4 text-sm rounded-xl focus:outline-none focus:border-primary-teal transition-colors bg-gray-50 focus:bg-white"
+                          className="w-full border-2 border-gray-100 py-4 pl-12 pr-4 text-sm rounded-xl focus:outline-none focus:border-primary-blue transition-colors bg-gray-50 focus:bg-white"
                         />
                       </div>
                     </div>
@@ -316,7 +308,7 @@ const ContactPage = () => {
                           value={formData.service}
                           onChange={handleChange}
                           required
-                          className="w-full border-2 border-gray-100 py-4 px-4 text-sm rounded-xl focus:outline-none focus:border-primary-teal transition-colors bg-gray-50 focus:bg-white appearance-none cursor-pointer"
+                          className="w-full border-2 border-gray-100 py-4 px-4 text-sm rounded-xl focus:outline-none focus:border-primary-blue transition-colors bg-gray-50 focus:bg-white appearance-none cursor-pointer"
                         >
                           <option value="">Select a Service</option>
                           {services.map((service) => (
@@ -340,7 +332,7 @@ const ContactPage = () => {
                           onChange={handleChange}
                           required
                           placeholder="How can we help?"
-                          className="w-full border-2 border-gray-100 py-4 pl-12 pr-4 text-sm rounded-xl focus:outline-none focus:border-primary-teal transition-colors bg-gray-50 focus:bg-white"
+                          className="w-full border-2 border-gray-100 py-4 pl-12 pr-4 text-sm rounded-xl focus:outline-none focus:border-primary-blue transition-colors bg-gray-50 focus:bg-white"
                         />
                       </div>
                     </div>
@@ -357,7 +349,7 @@ const ContactPage = () => {
                       required
                       rows="5"
                       placeholder="Tell us about your project, requirements, or questions..."
-                      className="w-full border-2 border-gray-100 py-4 px-4 text-sm rounded-xl focus:outline-none focus:border-primary-teal transition-colors resize-none bg-gray-50 focus:bg-white"
+                      className="w-full border-2 border-gray-100 py-4 px-4 text-sm rounded-xl focus:outline-none focus:border-primary-blue transition-colors resize-none bg-gray-50 focus:bg-white"
                     />
                   </div>
 
@@ -380,7 +372,7 @@ const ContactPage = () => {
 
                   <button
                     type="submit"
-                    className="w-full bg-gradient-to-r from-primary-dark to-primary-teal text-white py-4 rounded-xl font-bold uppercase tracking-wider hover:shadow-lg hover:shadow-primary-teal/30 transition-all flex items-center justify-center gap-2 group"
+                    className="w-full bg-gradient-to-r from-primary-dark to-primary-blue text-white py-4 rounded-xl font-bold uppercase tracking-wider hover:shadow-lg hover:shadow-primary-blue/30 transition-all flex items-center justify-center gap-2 group"
                   >
                     Send Message
                     <Send className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
@@ -398,14 +390,14 @@ const ContactPage = () => {
               className="lg:col-span-2 space-y-6"
             >
               {/* Quick Contact Card */}
-              <div className="bg-gradient-to-br from-primary-dark to-[#2a2a4a] p-8 rounded-3xl text-white relative overflow-hidden">
+              <div className="bg-gradient-to-br from-primary-blue to-[#0d2050] p-8 rounded-3xl text-white relative overflow-hidden">
                 {/* Decorative */}
-                <div className="absolute top-0 right-0 w-32 h-32 bg-primary-teal/20 rounded-full blur-2xl" />
+                <div className="absolute top-0 right-0 w-32 h-32 bg-primary-blue/20 rounded-full blur-2xl" />
                 <div className="absolute bottom-0 left-0 w-24 h-24 bg-blue-500/20 rounded-full blur-2xl" />
                 
                 <div className="relative z-10">
                   <div className="flex items-center gap-3 mb-6">
-                    <div className="w-14 h-14 bg-primary-teal rounded-2xl flex items-center justify-center">
+                    <div className="w-14 h-14 bg-primary-blue rounded-2xl flex items-center justify-center">
                       <HeadphonesIcon className="h-7 w-7 text-white" />
                     </div>
                     <div>
@@ -416,32 +408,32 @@ const ContactPage = () => {
                   
                   <div className="space-y-5">
                     <a href="tel:5003692580" className="flex items-center gap-4 p-4 bg-white/10 rounded-xl hover:bg-white/20 transition-colors group">
-                      <div className="w-12 h-12 bg-primary-teal rounded-xl flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
+                      <div className="w-12 h-12 bg-primary-blue rounded-xl flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
                         <Phone className="h-5 w-5 text-white" />
                       </div>
                       <div>
                         <p className="text-xs font-bold uppercase tracking-wider text-gray-400 mb-1">Call Us Now</p>
-                        <p className="text-lg font-black group-hover:text-primary-teal transition-colors">+91 7275646711</p>
+                        <p className="text-lg font-black group-hover:text-primary-blue transition-colors">+91 7275646711</p>
                       </div>
                     </a>
 
                     <a href="mailto:info@EcomSyncify .com" className="flex items-center gap-4 p-4 bg-white/10 rounded-xl hover:bg-white/20 transition-colors group">
-                      <div className="w-12 h-12 bg-primary-teal rounded-xl flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
+                      <div className="w-12 h-12 bg-primary-blue rounded-xl flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
                         <Mail className="h-5 w-5 text-white" />
                       </div>
                       <div>
                         <p className="text-xs font-bold uppercase tracking-wider text-gray-400 mb-1">Email Us</p>
-                        <p className="text-lg font-black group-hover:text-primary-teal transition-colors">support@ecomsyncify .com</p>
+                        <p className="text-lg font-black group-hover:text-primary-blue transition-colors">support@ecomsyncify .com</p>
                       </div>
                     </a>
 
                     <a href="#" className="flex items-center gap-4 p-4 bg-white/10 rounded-xl hover:bg-white/20 transition-colors group">
-                      <div className="w-12 h-12 bg-primary-teal rounded-xl flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
+                      <div className="w-12 h-12 bg-primary-blue rounded-xl flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
                         <MessageCircle className="h-5 w-5 text-white" />
                       </div>
                       <div>
                         <p className="text-xs font-bold uppercase tracking-wider text-gray-400 mb-1">Live Chat</p>
-                        <p className="text-lg font-black group-hover:text-primary-teal transition-colors">Start Chat</p>
+                        <p className="text-lg font-black group-hover:text-primary-blue transition-colors">Start Chat</p>
                       </div>
                     </a>
                   </div>
@@ -468,7 +460,7 @@ const ContactPage = () => {
               {/* Business Hours */}
               <div className="bg-white p-6 rounded-2xl shadow-lg border border-gray-100">
                 <h3 className="text-lg font-black text-primary-dark mb-5 flex items-center gap-2">
-                  <Calendar className="h-5 w-5 text-primary-teal" />
+                  <Calendar className="h-5 w-5 text-primary-blue" />
                   Business Hours
                 </h3>
                 <div className="space-y-3">
@@ -506,13 +498,13 @@ const ContactPage = () => {
             className="text-center mb-16"
           >
             <div className="flex items-center justify-center gap-3 mb-4">
-              <div className="h-[3px] w-10 bg-primary-teal" />
-              <span className="text-primary-teal font-bold uppercase tracking-widest text-sm">FAQ</span>
-              <div className="h-[3px] w-10 bg-primary-teal" />
+              <div className="h-[3px] w-10 bg-primary-blue" />
+              <span className="text-primary-blue font-bold uppercase tracking-widest text-sm">FAQ</span>
+              <div className="h-[3px] w-10 bg-primary-blue" />
             </div>
             <h2 className="text-4xl lg:text-5xl font-black text-primary-dark leading-tight">
               Frequently Asked<br />
-              <span className="text-primary-teal">Questions</span>
+              <span className="text-primary-blue">Questions</span>
             </h2>
             <p className="text-gray-600 mt-4 max-w-xl mx-auto">Can't find what you're looking for? Reach out to our team directly.</p>
           </motion.div>
@@ -535,11 +527,11 @@ const ContactPage = () => {
                   className="w-full flex items-center justify-between p-6 text-left"
                 >
                   <h4 className="text-lg font-bold text-primary-dark pr-4 flex items-start gap-3">
-                    <span className="text-primary-teal shrink-0 font-black">Q{idx + 1}.</span>
+                    <span className="text-primary-blue shrink-0 font-black">Q{idx + 1}.</span>
                     {faq.question}
                   </h4>
                   <span className={`shrink-0 w-8 h-8 rounded-full flex items-center justify-center transition-colors ${
-                    openFaq === idx ? 'bg-primary-teal text-white rotate-180' : 'bg-gray-100 text-gray-600'
+                    openFaq === idx ? 'bg-primary-blue text-white rotate-180' : 'bg-gray-100 text-gray-600'
                   }`}>
                     <ChevronDown className="h-5 w-5" />
                   </span>

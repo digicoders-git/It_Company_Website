@@ -36,7 +36,7 @@ const TopBar = () => {
               <a
                 key={idx}
                 href="#"
-                className="text-gray-400 hover:text-primary-teal transition-colors"
+                className="text-gray-400 hover:text-primary-blue transition-colors"
               >
                 <Icon />
               </a>
@@ -47,13 +47,13 @@ const TopBar = () => {
 
           {/* Phone */}
           <a href="tel:5003692580" className="flex items-center gap-1.5 text-xs font-medium text-gray-400 hover:text-white transition-colors">
-            <Phone className="h-3.5 w-3.5 text-primary-teal" />
+            <Phone className="h-3.5 w-3.5 text-primary-blue" />
             <span>500.369.2580</span>
           </a>
 
           {/* Email */}
           <a href="mailto:info@EcomSyncify .com" className="flex items-center gap-1.5 text-xs font-medium text-gray-400 hover:text-white transition-colors">
-            <Mail className="h-3.5 w-3.5 text-primary-teal" />
+            <Mail className="h-3.5 w-3.5 text-primary-blue" />
             <span>info@EcomSyncify .com</span>
           </a>
 

@@ -36,32 +36,32 @@ const AllServicesPage = () => {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-[#1a1a1a] pt-32 pb-24">
+      <section className="relative overflow-hidden bg-primary-blue pt-32 pb-24">
         <div className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/2">
-          <div className="w-[300px] h-[300px] lg:w-[400px] lg:h-[400px] rounded-full border-[40px] lg:border-[60px] border-[#2a2a2a] opacity-60" />
+          <div className="w-[300px] h-[300px] lg:w-[400px] lg:h-[400px] rounded-full border-[40px] lg:border-[60px] border-white/5 opacity-60" />
         </div>
         <div className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2">
-          <div className="w-[250px] h-[250px] lg:w-[350px] lg:h-[350px] rounded-full border-[35px] lg:border-[50px] border-[#2a2a2a] opacity-60" />
+          <div className="w-[250px] h-[250px] lg:w-[350px] lg:h-[350px] rounded-full border-[35px] lg:border-[50px] border-white/5 opacity-60" />
         </div>
 
         <div className="container relative z-10">
           <div className="max-w-3xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 bg-primary-teal/20 px-5 py-2.5 rounded-sm mb-8">
-              <span className="w-2 h-2 rounded-full bg-primary-teal animate-pulse" />
-              <span className="text-primary-teal text-sm font-semibold uppercase tracking-wider">What We Offer</span>
+            <div className="inline-flex items-center gap-2 bg-white/10 px-5 py-2.5 rounded-full mb-8">
+              <span className="w-2 h-2 rounded-full bg-white animate-pulse" />
+              <span className="text-white text-sm font-bold uppercase tracking-wider">What We Offer</span>
             </div>
             
-            <h1 className="text-4xl lg:text-5xl font-bold text-white leading-tight mb-6">
-              Our <span className="text-primary-teal">Services</span>
+            <h1 className="text-4xl lg:text-6xl font-black text-white leading-tight mb-6">
+              Our <span className="text-white">Services</span>
             </h1>
             
-            <p className="text-gray-300 text-lg leading-relaxed mb-8">
+            <p className="text-white/90 text-lg leading-relaxed mb-8">
               We provide comprehensive IT solutions to help your business grow and succeed in the digital age.
             </p>
 
             <button 
               onClick={() => setQuoteModalOpen(true)}
-              className="btn-primary inline-flex"
+              className="bg-white text-primary-blue px-8 py-4 rounded-full font-black uppercase tracking-wider text-sm hover:bg-white/90 transition-all inline-flex items-center gap-2 shadow-xl"
             >
               Get Free Quote <ArrowRight className="h-4 w-4" />
             </button>
@@ -77,18 +77,18 @@ const AllServicesPage = () => {
               <Link
                 key={idx}
                 to={service.link}
-                className="group bg-gray-50 rounded-2xl p-8 hover:shadow-xl transition-all hover:-translate-y-1"
+                className="group bg-white rounded-xl p-8 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-2 border-gray-100 hover:border-primary-blue"
               >
-                <div className="w-14 h-14 bg-primary-teal/10 rounded-xl flex items-center justify-center text-primary-teal mb-6 group-hover:bg-primary-teal group-hover:text-white transition-all">
+                <div className="w-16 h-16 bg-primary-blue/10 rounded-xl flex items-center justify-center text-primary-blue mb-6 group-hover:bg-primary-blue group-hover:text-white transition-all group-hover:scale-110">
                   <service.icon className="h-7 w-7" />
                 </div>
-                <h3 className="text-xl font-bold text-primary-dark mb-3 group-hover:text-primary-teal transition-colors">
+                <h3 className="text-2xl font-black text-primary-dark mb-3 group-hover:text-primary-blue transition-colors">
                   {service.title}
                 </h3>
-                <p className="text-gray-600 text-sm leading-relaxed mb-4">
+                <p className="text-gray-600 text-base leading-relaxed mb-4 font-medium">
                   {service.description}
                 </p>
-                <span className="inline-flex items-center gap-2 text-primary-teal font-semibold text-sm">
+                <span className="inline-flex items-center gap-2 text-primary-blue font-bold text-sm">
                   Learn More <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
                 </span>
               </Link>
@@ -98,18 +98,18 @@ const AllServicesPage = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-primary-teal">
+      <section className="py-20 bg-white">
         <div className="container text-center">
           <div className="max-w-2xl mx-auto">
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
+            <h2 className="text-4xl lg:text-5xl font-black text-primary-dark mb-6">
               Need a Custom Solution?
             </h2>
-            <p className="text-white/80 mb-8">
+            <p className="text-gray-600 text-lg font-medium mb-8">
               Let's discuss your project and find the best solution for your business.
             </p>
             <button 
               onClick={() => setQuoteModalOpen(true)}
-              className="bg-white text-primary-teal px-8 py-4 font-bold uppercase tracking-wider text-sm hover:bg-primary-dark hover:text-white transition-all inline-flex items-center gap-2"
+              className="bg-primary-blue text-white px-10 py-4 rounded-full font-black uppercase tracking-wider text-sm hover:bg-primary-dark hover:shadow-xl transition-all inline-flex items-center gap-2"
             >
               Contact Us <ArrowRight className="h-4 w-4" />
             </button>

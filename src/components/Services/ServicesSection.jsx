@@ -8,16 +8,14 @@ const services = [
     title: 'Website Development',
     description: 'Create stunning, high-performance websites that drive results and engage your audience.',
     link: '/services/website-development',
-    bgImage: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800',
-    bgColor: 'from-blue-600/90 to-purple-600/90',
+    bgImage: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop&q=80',
   },
   {
     icon: Smartphone,
     title: 'Mobile App Development',
     description: 'Transform your ideas into powerful iOS and Android applications with exceptional UX.',
     link: '/services/mobile-app-development',
-    bgImage: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&q=80&w=800',
-    bgColor: 'from-primary-teal/90 to-rose-500/90',
+    bgImage: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&h=600&fit=crop&q=80',
     popular: true,
   },
   {
@@ -25,16 +23,14 @@ const services = [
     title: 'Software Development',
     description: 'Custom software solutions built to streamline operations and drive business growth.',
     link: '/services/software-development',
-    bgImage: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=800',
-    bgColor: 'from-emerald-600/90 to-teal-600/90',
+    bgImage: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&h=600&fit=crop&q=80',
   },
   {
     icon: TrendingUp,
     title: 'Digital Marketing',
     description: 'Boost your online presence with data-driven marketing strategies that deliver results.',
     link: '/services/digital-marketing',
-    bgImage: 'https://images.unsplash.com/photo-1533750349088-cd871a92f312?auto=format&fit=crop&q=80&w=800',
-    bgColor: 'from-orange-500/90 to-amber-600/90',
+    bgImage: 'https://images.unsplash.com/photo-1533750349088-cd871a92f312?w=800&h=600&fit=crop&q=80',
   },
 ];
 
@@ -44,14 +40,14 @@ const ServicesSection = () => {
       <div className="container">
         {/* Header */}
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 bg-primary-teal/10 px-4 py-2 rounded-full mb-6">
-            <span className="w-2 h-2 rounded-full bg-primary-teal animate-pulse" />
-            <span className="text-primary-teal font-bold uppercase tracking-wider text-sm">
+          <div className="inline-flex items-center gap-2 bg-primary-blue/10 px-4 py-2 rounded-full mb-6">
+            <span className="w-2 h-2 rounded-full bg-primary-blue animate-pulse" />
+            <span className="text-primary-blue font-bold uppercase tracking-wider text-sm">
               What We Offer
             </span>
           </div>
           <h2 className="text-4xl lg:text-5xl font-bold text-primary-dark leading-tight">
-            Our Core <span className="text-primary-teal">Services</span>
+            Our Core <span className="text-primary-blue">Services</span>
           </h2>
         </div>
 
@@ -72,12 +68,12 @@ const ServicesSection = () => {
                     alt={service.title}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   />
-                  <div className={`absolute inset-0 bg-gradient-to-br ${service.bgColor}`} />
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary-blue/90 to-[#0d2050]/90" />
                 </div>
 
                 {/* Popular Badge */}
                 {service.popular && (
-                  <div className="absolute top-4 right-4 bg-primary-teal text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider z-10">
+                  <div className="absolute top-4 right-4 bg-white text-primary-blue text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wider z-10 shadow-lg">
                     Popular
                   </div>
                 )}
@@ -85,7 +81,7 @@ const ServicesSection = () => {
                 {/* Content */}
                 <div className="relative z-10 p-8 min-h-[360px] flex flex-col">
                   {/* Icon */}
-                  <div className="w-16 h-16 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center mb-6 transition-transform duration-300 group-hover:scale-110">
+                  <div className="w-16 h-16 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center mb-6 border-2 border-white/30 transition-all duration-300 group-hover:scale-110 group-hover:bg-white/20">
                     <Icon className="h-8 w-8 text-white" />
                   </div>
 
