@@ -135,7 +135,7 @@ const ContactPage = () => {
               className="inline-flex items-center gap-2 bg-primary-blue/20 px-5 py-2.5 rounded-sm mb-8"
             >
               <span className="w-2 h-2 rounded-full bg-primary-blue animate-pulse" />
-              <span className="text-primary-blue text-sm font-bold uppercase tracking-wider">Get In Touch</span>
+              <span className="text-white text-sm font-bold uppercase tracking-wider">Get In Touch</span>
             </motion.div>
             
             {/* Heading */}

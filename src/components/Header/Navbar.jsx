@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Search, Menu, X, ChevronDown, ArrowRight } from 'lucide-react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence, useScroll, useTransform } from 'framer-motion';
 import { Link, useLocation } from 'react-router-dom';
 import QuoteModal from '../Modal/QuoteModal';
 
@@ -30,6 +30,10 @@ const Navbar = () => {
   const [openSubmenu, setOpenSubmenu] = useState(null);
   const [quoteModalOpen, setQuoteModalOpen] = useState(false);
   const location = useLocation();
+  
+  const { scrollY } = useScroll();
+  const navY = useTransform(scrollY, [0, 100], [0, -10]);
+  const navOpacity = useTransform(scrollY, [0, 100], [1, 0.95]);
 
   useEffect(() => {
     const onScroll = () => setIsSticky(window.scrollY > 80);
@@ -44,7 +48,8 @@ const Navbar = () => {
 
   return (
     <>
-      <nav
+      <motion.nav
+        style={{ y: navY, opacity: navOpacity }}
         className={`z-50 transition-all duration-300 ${
           isSticky
             ? 'fixed top-0 left-0 right-0 bg-white shadow-lg py-3'
@@ -54,7 +59,13 @@ const Navbar = () => {
         <div className="container flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2 shrink-0">
-            <img src="/image.png" alt="EcomSyncify" className="h-10 w-auto" />
+            <motion.img 
+              whileHover={{ scale: 1.1, rotate: 5 }}
+              transition={{ type: "spring", stiffness: 300 }}
+              src="/image.png" 
+              alt="EcomSyncify" 
+              className="h-10 w-auto" 
+            />
           </Link>
 
           {/* Desktop Menu */}
@@ -83,10 +94,22 @@ const Navbar = () => {
 
                 {/* Dropdown */}
                 {item.submenu && (
-                  <div className="absolute top-full left-0 w-[240px] opacity-0 invisible translate-y-3 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 z-50 bg-white shadow-2xl border-t-2 border-primary-blue">
+                  <motion.div 
+                    initial={{ opacity: 0, y: -10, rotateX: -15 }}
+                    whileInView={{ opacity: 1, y: 0, rotateX: 0 }}
+                    style={{ transformStyle: "preserve-3d" }}
+                    className="absolute top-full left-0 w-[240px] opacity-0 invisible translate-y-3 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 z-50 bg-white shadow-2xl border-t-2 border-primary-blue"
+                  >
                     <ul>
                       {item.submenu.map((sub, sIdx) => (
-                        <li key={sIdx} className="border-b border-gray-50 last:border-0">
+                        <motion.li 
+                          key={sIdx} 
+                          initial={{ opacity: 0, x: -10 }}
+                          whileInView={{ opacity: 1, x: 0 }}
+                          transition={{ delay: sIdx * 0.05 }}
+                          whileHover={{ x: 10, backgroundColor: "#f0f9ff" }}
+                          className="border-b border-gray-50 last:border-0"
+                        >
                           <Link
                             to={sub.link}
                             className="flex items-center gap-2 px-6 py-3.5 text-[13px] font-bold text-gray-600 hover:text-primary-blue hover:pl-8 transition-all duration-200 uppercase tracking-wide"
@@ -94,10 +117,10 @@ const Navbar = () => {
                             <ArrowRight className="h-3 w-3 shrink-0 text-primary-blue" />
                             {sub.label}
                           </Link>
-                        </li>
+                        </motion.li>
                       ))}
                     </ul>
-                  </div>
+                  </motion.div>
                 )}
               </li>
             ))}
@@ -109,14 +132,21 @@ const Navbar = () => {
               onClick={() => setSearchOpen(!searchOpen)}
               className="text-gray-500 hover:text-primary-blue transition-colors p-2"
             >
-              <Search className="h-5 w-5" />
+              <motion.div
+                whileHover={{ rotate: 90, scale: 1.2 }}
+                transition={{ duration: 0.3 }}
+              >
+                <Search className="h-5 w-5" />
+              </motion.div>
             </button>
-            <button 
+            <motion.button 
               onClick={() => setQuoteModalOpen(true)}
+              whileHover={{ scale: 1.05, boxShadow: "0 10px 30px rgba(0,102,204,0.3)" }}
+              whileTap={{ scale: 0.95 }}
               className="btn-primary text-xs py-3 px-6"
             >
               Free Quote <ArrowRight className="h-3.5 w-3.5" />
-            </button>
+            </motion.button>
           </div>
 
           {/* Mobile Toggle */}
@@ -148,7 +178,7 @@ const Navbar = () => {
             </motion.div>
           )}
         </AnimatePresence>
-      </nav>
+      </motion.nav>
 
       {/* Mobile Menu */}
       <AnimatePresence>

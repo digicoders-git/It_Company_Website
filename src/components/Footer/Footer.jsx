@@ -49,18 +49,41 @@ const Footer = () => {
   return (
     <footer className="relative overflow-hidden bg-primary-blue pt-24 pb-0 text-white">
       {/* Decorative shapes */}
-      <div className="absolute top-0 right-0 w-80 h-80 rounded-full bg-white/5 blur-3xl pointer-events-none" />
-      <div className="absolute bottom-0 left-0 w-96 h-96 rounded-full bg-white/5 blur-3xl pointer-events-none" />
+      <motion.div 
+        animate={{ 
+          scale: [1, 1.2, 1],
+          rotate: [0, 90, 0]
+        }}
+        transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+        className="absolute top-0 right-0 w-80 h-80 rounded-full bg-white/5 blur-3xl pointer-events-none" 
+      />
+      <motion.div 
+        animate={{ 
+          scale: [1, 1.3, 1],
+          rotate: [0, -90, 0]
+        }}
+        transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
+        className="absolute bottom-0 left-0 w-96 h-96 rounded-full bg-white/5 blur-3xl pointer-events-none" 
+      />
 
       <div className="container relative z-10">
         <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-4 pb-16 border-b border-white/20">
 
           {/* Column 1 - About */}
-          <div>
+          <motion.div
+            initial={{ opacity: 0, y: 50, rotateX: -15 }}
+            whileInView={{ opacity: 1, y: 0, rotateX: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, type: "spring" }}
+            style={{ transformStyle: "preserve-3d" }}
+          >
             {/* Logo */}
-            <div className="flex items-center gap-2 mb-6">
+            <motion.div 
+              whileHover={{ scale: 1.05, rotateY: 5 }}
+              className="flex items-center gap-2 mb-6"
+            >
               <img src="/image.png" alt="EcomSyncify" className="h-10 w-auto" />
-            </div>
+            </motion.div>
 
             <p className="text-white/80 text-sm font-medium leading-relaxed mb-8">
               Through our focus on innovation and efficiency, we provide results that matter. Our team of experts works closely with you to understand your unique challenges.
@@ -71,86 +94,192 @@ const Footer = () => {
                 <motion.a
                   key={idx}
                   href="#"
-                  whileHover={{ scale: 1.1, backgroundColor: '#ffffff' }}
+                  initial={{ opacity: 0, scale: 0, rotateZ: -180 }}
+                  whileInView={{ opacity: 1, scale: 1, rotateZ: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: idx * 0.1, type: "spring", stiffness: 200 }}
+                  whileHover={{ 
+                    scale: 1.2, 
+                    backgroundColor: '#ffffff',
+                    rotateY: 360,
+                    boxShadow: "0 10px 30px rgba(255,255,255,0.3)"
+                  }}
+                  style={{ transformStyle: "preserve-3d" }}
                   className="flex h-10 w-10 items-center justify-center border border-white/20 text-white hover:text-primary-blue transition-all"
                 >
                   <Icon className="h-4 w-4" />
                 </motion.a>
               ))}
             </div>
-          </div>
+          </motion.div>
 
           {/* Column 2 - Quick Links */}
-          <div>
+          <motion.div
+            initial={{ opacity: 0, y: 50, rotateX: -15 }}
+            whileInView={{ opacity: 1, y: 0, rotateX: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.1, type: "spring" }}
+            style={{ transformStyle: "preserve-3d" }}
+          >
             <h4 className="text-lg font-bold text-white mb-6 pb-4 border-b border-white/20 relative">
               Quick Links
-              <span className="absolute bottom-0 left-0 h-[2px] w-10 bg-white" />
+              <motion.span 
+                initial={{ scaleX: 0 }}
+                whileInView={{ scaleX: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.3, duration: 0.6 }}
+                className="absolute bottom-0 left-0 h-[2px] w-10 bg-white origin-left" 
+              />
             </h4>
             <ul className="flex flex-col gap-3">
               {quickLinks.map((link, idx) => (
-                <li key={idx}>
+                <motion.li 
+                  key={idx}
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: idx * 0.05 }}
+                  whileHover={{ x: 10 }}
+                >
                   <Link
                     to={link.path}
-                    className="flex items-center gap-2 text-white/80 text-sm font-medium hover:text-white hover:gap-3 transition-all duration-200"
+                    className="flex items-center gap-2 text-white/80 text-sm font-medium hover:text-white transition-all duration-200"
                   >
-                    <ArrowRight className="h-3 w-3 shrink-0" />
+                    <motion.div
+                      animate={{ x: [0, 3, 0] }}
+                      transition={{ duration: 1.5, repeat: Infinity, delay: idx * 0.2 }}
+                    >
+                      <ArrowRight className="h-3 w-3 shrink-0" />
+                    </motion.div>
                     {link.label}
                   </Link>
-                </li>
+                </motion.li>
               ))}
             </ul>
-          </div>
+          </motion.div>
 
           {/* Column 3 - Services */}
-          <div>
+          <motion.div
+            initial={{ opacity: 0, y: 50, rotateX: -15 }}
+            whileInView={{ opacity: 1, y: 0, rotateX: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2, type: "spring" }}
+            style={{ transformStyle: "preserve-3d" }}
+          >
             <h4 className="text-lg font-bold text-white mb-6 pb-4 border-b border-white/20 relative">
               Our Services
-              <span className="absolute bottom-0 left-0 h-[2px] w-10 bg-white" />
+              <motion.span 
+                initial={{ scaleX: 0 }}
+                whileInView={{ scaleX: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.4, duration: 0.6 }}
+                className="absolute bottom-0 left-0 h-[2px] w-10 bg-white origin-left" 
+              />
             </h4>
             <ul className="flex flex-col gap-3">
               {services.map((service, idx) => (
-                <li key={idx}>
+                <motion.li 
+                  key={idx}
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: idx * 0.05 }}
+                  whileHover={{ x: 10 }}
+                >
                   <Link
                     to={service.path}
-                    className="flex items-center gap-2 text-white/80 text-sm font-medium hover:text-white hover:gap-3 transition-all duration-200"
+                    className="flex items-center gap-2 text-white/80 text-sm font-medium hover:text-white transition-all duration-200"
                   >
-                    <ArrowRight className="h-3 w-3 shrink-0" />
+                    <motion.div
+                      animate={{ x: [0, 3, 0] }}
+                      transition={{ duration: 1.5, repeat: Infinity, delay: idx * 0.2 }}
+                    >
+                      <ArrowRight className="h-3 w-3 shrink-0" />
+                    </motion.div>
                     {service.label}
                   </Link>
-                </li>
+                </motion.li>
               ))}
             </ul>
-          </div>
+          </motion.div>
 
           {/* Column 4 - Contact + Newsletter */}
-          <div>
+          <motion.div
+            initial={{ opacity: 0, y: 50, rotateX: -15 }}
+            whileInView={{ opacity: 1, y: 0, rotateX: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.3, type: "spring" }}
+            style={{ transformStyle: "preserve-3d" }}
+          >
             <h4 className="text-lg font-black text-white mb-6 pb-4 border-b border-white/20 relative">
               Contact Info
-              <span className="absolute bottom-0 left-0 h-[2px] w-10 bg-white" />
+              <motion.span 
+                initial={{ scaleX: 0 }}
+                whileInView={{ scaleX: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.5, duration: 0.6 }}
+                className="absolute bottom-0 left-0 h-[2px] w-10 bg-white origin-left" 
+              />
             </h4>
             <ul className="flex flex-col gap-4 mb-8">
-              <li className="flex items-start gap-3">
-                <MapPin className="h-5 w-5 shrink-0 text-white mt-0.5" />
+              <motion.li 
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.1 }}
+                whileHover={{ x: 5 }}
+                className="flex items-start gap-3"
+              >
+                <motion.div
+                  whileHover={{ rotate: 360, scale: 1.2 }}
+                  transition={{ duration: 0.5 }}
+                >
+                  <MapPin className="h-5 w-5 shrink-0 text-white mt-0.5" />
+                </motion.div>
                 <span className="text-white/80 text-sm font-medium">EcomSyncify Technologies LLP
 
 P-53 / VK Residency Haldharu,
 Surat, Gujarat, India - 394305</span>
-              </li>
-              <li className="flex items-center gap-3">
-                <Phone className="h-5 w-5 shrink-0 text-white" />
+              </motion.li>
+              <motion.li 
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.2 }}
+                whileHover={{ x: 5 }}
+                className="flex items-center gap-3"
+              >
+                <motion.div
+                  whileHover={{ rotate: 360, scale: 1.2 }}
+                  transition={{ duration: 0.5 }}
+                >
+                  <Phone className="h-5 w-5 shrink-0 text-white" />
+                </motion.div>
                 <a href="tel:+156984538" className="text-white/80 text-sm font-medium hover:text-white transition-colors">
                   +91 7275646711
                 </a>
-              </li>
-              <li className="flex items-center gap-3">
-                <Mail className="h-5 w-5 shrink-0 text-white" />
+              </motion.li>
+              <motion.li 
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.3 }}
+                whileHover={{ x: 5 }}
+                className="flex items-center gap-3"
+              >
+                <motion.div
+                  whileHover={{ rotate: 360, scale: 1.2 }}
+                  transition={{ duration: 0.5 }}
+                >
+                  <Mail className="h-5 w-5 shrink-0 text-white" />
+                </motion.div>
                 <a href="mailto:info@EcomSyncify .com" className="text-white/80 text-sm font-medium hover:text-white transition-colors">
                   support@ecomsyncify .com
                 </a>
-              </li>
+              </motion.li>
             </ul>
 
-          </div>
+          </motion.div>
         </div>
 
         {/* Copyright */}

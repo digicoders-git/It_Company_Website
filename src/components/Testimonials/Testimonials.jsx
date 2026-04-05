@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence, useMotionValue, useTransform } from 'framer-motion';
 import { Star, ChevronLeft, ChevronRight, Quote } from 'lucide-react';
 
 const testimonials = [
@@ -28,6 +28,8 @@ const testimonials = [
 
 const Testimonials = () => {
   const [current, setCurrent] = useState(0);
+  const x = useMotionValue(0);
+  const rotateY = useTransform(x, [-200, 200], [-15, 15]);
 
   const prev = () => setCurrent((c) => (c === 0 ? testimonials.length - 1 : c - 1));
   const next = () => setCurrent((c) => (c === testimonials.length - 1 ? 0 : c + 1));
@@ -37,70 +39,138 @@ const Testimonials = () => {
       <div className="container">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Left - Header */}
-          <div>
-            <div className="flex items-center gap-3 mb-4">
+          <motion.div
+            initial={{ opacity: 0, x: -50, rotateY: -15 }}
+            whileInView={{ opacity: 1, x: 0, rotateY: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, type: "spring" }}
+            style={{ transformStyle: "preserve-3d" }}
+          >
+            <motion.div 
+              initial={{ opacity: 0, scaleX: 0 }}
+              whileInView={{ opacity: 1, scaleX: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+              className="flex items-center gap-3 mb-4"
+            >
               <div className="h-[2px] w-10 bg-primary-blue" />
               <span className="text-primary-blue font-semibold uppercase tracking-widest text-sm">
                 Testimonials
               </span>
-            </div>
-            <h2 className="text-4xl lg:text-5xl font-bold text-primary-dark leading-tight mb-6">
+            </motion.div>
+            <motion.h2 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.3 }}
+              className="text-4xl lg:text-5xl font-bold text-primary-dark leading-tight mb-6"
+            >
               What Our Clients<br />
-              <span className="text-primary-blue">Say About Us</span>
-            </h2>
-            <p className="text-gray-500 font-normal leading-relaxed mb-10">
+              <motion.span 
+                whileHover={{ scale: 1.05, display: "inline-block" }}
+                style={{ display: "inline-block" }}
+                className="text-primary-blue"
+              >
+                Say About Us
+              </motion.span>
+            </motion.h2>
+            <motion.p 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.4 }}
+              className="text-gray-500 font-normal leading-relaxed mb-10"
+            >
               Don't just take our word for it. Here's what our clients have to say about working with EcomSyncify  IT Solutions.
-            </p>
+            </motion.p>
 
             {/* Navigation */}
-            <div className="flex items-center gap-4">
-              <button
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.5 }}
+              className="flex items-center gap-4"
+            >
+              <motion.button
                 onClick={prev}
+                whileHover={{ scale: 1.1, backgroundColor: "#0066cc", borderColor: "#0066cc", color: "#ffffff" }}
+                whileTap={{ scale: 0.9 }}
                 className="h-14 w-14 flex items-center justify-center border-2 border-gray-200 text-gray-400 hover:border-primary-blue hover:bg-primary-blue hover:text-white transition-all duration-300"
               >
                 <ChevronLeft className="h-6 w-6" />
-              </button>
-              <button
+              </motion.button>
+              <motion.button
                 onClick={next}
+                whileHover={{ scale: 1.1, backgroundColor: "transparent", color: "#0066cc" }}
+                whileTap={{ scale: 0.9 }}
                 className="h-14 w-14 flex items-center justify-center border-2 border-primary-blue bg-primary-blue text-white hover:bg-transparent hover:text-primary-blue transition-all duration-300"
               >
                 <ChevronRight className="h-6 w-6" />
-              </button>
+              </motion.button>
               <span className="text-gray-400 font-semibold text-sm ml-2">
                 {String(current + 1).padStart(2, '0')} / {String(testimonials.length).padStart(2, '0')}
               </span>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
 
           {/* Right - Testimonial Card */}
-          <div className="relative">
+          <div className="relative" style={{ perspective: 1000 }}>
             <AnimatePresence mode="wait">
               <motion.div
                 key={current}
-                initial={{ opacity: 0, x: 40 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -40 }}
-                transition={{ duration: 0.4 }}
+                initial={{ opacity: 0, x: 100, rotateY: 45, z: -200 }}
+                animate={{ opacity: 1, x: 0, rotateY: 0, z: 0 }}
+                exit={{ opacity: 0, x: -100, rotateY: -45, z: -200 }}
+                transition={{ duration: 0.6, type: "spring" }}
+                style={{ transformStyle: "preserve-3d", rotateY }}
+                whileHover={{ scale: 1.02, z: 50 }}
                 className="bg-white p-10 shadow-xl relative"
               >
                 {/* Quote Icon */}
-                <div className="absolute -top-5 -left-5 h-14 w-14 bg-primary-blue flex items-center justify-center">
+                <motion.div 
+                  initial={{ scale: 0, rotate: -180 }}
+                  animate={{ scale: 1, rotate: 0 }}
+                  transition={{ delay: 0.3, type: "spring" }}
+                  whileHover={{ rotate: 360, scale: 1.2 }}
+                  style={{ transformStyle: "preserve-3d", z: 50 }}
+                  className="absolute -top-5 -left-5 h-14 w-14 bg-primary-blue flex items-center justify-center"
+                >
                   <Quote className="h-7 w-7 text-white" fill="white" />
-                </div>
+                </motion.div>
 
                 {/* Stars */}
                 <div className="flex gap-1 mb-6">
                   {Array.from({ length: testimonials[current].rating }).map((_, i) => (
-                    <Star key={i} className="h-5 w-5 text-yellow-400" fill="#facc15" />
+                    <motion.div
+                      key={i}
+                      initial={{ opacity: 0, scale: 0, rotate: -180 }}
+                      animate={{ opacity: 1, scale: 1, rotate: 0 }}
+                      transition={{ delay: 0.1 * i, type: "spring" }}
+                      whileHover={{ scale: 1.3, rotate: 360 }}
+                    >
+                      <Star className="h-5 w-5 text-yellow-400" fill="#facc15" />
+                    </motion.div>
                   ))}
                 </div>
 
-                <p className="text-gray-600 text-lg leading-relaxed font-normal mb-8 italic">
+                <motion.p 
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.2 }}
+                  className="text-gray-600 text-lg leading-relaxed font-normal mb-8 italic"
+                >
                   "{testimonials[current].text}"
-                </p>
+                </motion.p>
 
-                <div className="flex items-center gap-4 border-t border-gray-100 pt-6">
-                  <img
+                <motion.div 
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.3 }}
+                  className="flex items-center gap-4 border-t border-gray-100 pt-6"
+                >
+                  <motion.img
+                    whileHover={{ scale: 1.2, rotate: 5 }}
                     src={testimonials[current].image}
                     alt={testimonials[current].name}
                     className="h-14 w-14 object-cover rounded-full"
@@ -109,7 +179,7 @@ const Testimonials = () => {
                     <h4 className="font-bold text-primary-dark">{testimonials[current].name}</h4>
                     <p className="text-primary-blue text-sm font-semibold">{testimonials[current].role}</p>
                   </div>
-                </div>
+                </motion.div>
 
                 {/* Bottom accent */}
                 <div className="absolute bottom-0 left-0 h-1 w-full bg-gradient-to-r from-primary-blue to-primary-blue" />
@@ -117,7 +187,14 @@ const Testimonials = () => {
             </AnimatePresence>
 
             {/* Decorative box */}
-            <div className="absolute -bottom-4 -right-4 w-full h-full border-2 border-primary-blue/20 -z-10" />
+            <motion.div 
+              animate={{ 
+                rotate: [0, 2, 0],
+                scale: [1, 1.02, 1]
+              }}
+              transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+              className="absolute -bottom-4 -right-4 w-full h-full border-2 border-primary-blue/20 -z-10" 
+            />
           </div>
         </div>
       </div>

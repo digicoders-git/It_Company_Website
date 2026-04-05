@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+import { motion, useMotionValue, useTransform } from 'framer-motion';
 import { ArrowRight, Image as ImageIcon } from 'lucide-react';
 
 const cases = [
@@ -27,34 +27,79 @@ const CaseCard = ({ item, idx }) => {
   const [imageLoaded, setImageLoaded] = useState(false);
   const [imageError, setImageError] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
+  
+  const x = useMotionValue(0);
+  const y = useMotionValue(0);
+  const rotateX = useTransform(y, [-100, 100], [10, -10]);
+  const rotateY = useTransform(x, [-100, 100], [-10, 10]);
+
+  const handleMouseMove = (e) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+    const centerX = rect.left + rect.width / 2;
+    const centerY = rect.top + rect.height / 2;
+    x.set(e.clientX - centerX);
+    y.set(e.clientY - centerY);
+  };
+
+  const handleMouseLeave = () => {
+    x.set(0);
+    y.set(0);
+    setIsHovered(false);
+  };
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 40 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.5, delay: idx * 0.12 }}
+      initial={{ opacity: 0, y: 80, rotateX: -20, z: -100 }}
+      whileInView={{ opacity: 1, y: 0, rotateX: 0, z: 0 }}
+      viewport={{ once: true, margin: "-50px" }}
+      transition={{ duration: 0.7, delay: idx * 0.12, type: "spring" }}
+      onMouseMove={handleMouseMove}
       onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-      className="group relative overflow-hidden bg-white border-2 border-gray-100 hover:border-primary-blue shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 rounded-xl cursor-pointer h-[450px]"
+      onMouseLeave={handleMouseLeave}
+      style={{ 
+        rotateX, 
+        rotateY,
+        transformStyle: "preserve-3d",
+        perspective: 1000
+      }}
+      whileHover={{ scale: 1.02, z: 50 }}
+      className="group relative overflow-hidden bg-white border-2 border-gray-100 hover:border-primary-blue shadow-lg hover:shadow-2xl transition-all duration-500 rounded-xl cursor-pointer h-[450px]"
     >
       {/* Background Gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary-blue to-[#0d2050]" />
 
       {/* Category Badge - Always Visible */}
-      <div className="absolute top-6 left-6 bg-white/10 backdrop-blur-sm text-white text-xs font-bold uppercase tracking-wider px-4 py-2 z-30 rounded-full border border-white/20">
+      <motion.div 
+        initial={{ opacity: 0, scale: 0, rotateZ: -45 }}
+        whileInView={{ opacity: 1, scale: 1, rotateZ: 0 }}
+        viewport={{ once: true }}
+        transition={{ delay: idx * 0.12 + 0.3, type: "spring" }}
+        whileHover={{ scale: 1.1, rotateZ: 5 }}
+        style={{ transformStyle: "preserve-3d", z: 50 }}
+        className="absolute top-6 left-6 bg-white/10 backdrop-blur-sm text-white text-xs font-bold uppercase tracking-wider px-4 py-2 z-30 rounded-full border border-white/20"
+      >
         {item.category}
-      </div>
+      </motion.div>
 
       {/* Title - Always Visible */}
-      <div className="absolute bottom-6 left-6 right-6 z-30">
-        <h3 className="text-2xl font-black text-white leading-tight mb-3">
+      <motion.div 
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ delay: idx * 0.12 + 0.4 }}
+        style={{ transformStyle: "preserve-3d", z: 50 }}
+        className="absolute bottom-6 left-6 right-6 z-30"
+      >
+        <motion.h3 
+          whileHover={{ x: 5 }}
+          className="text-2xl font-black text-white leading-tight mb-3"
+        >
           {item.title}
-        </h3>
+        </motion.h3>
         <p className="text-white/90 text-sm leading-relaxed font-medium">
           {item.description}
         </p>
-      </div>
+      </motion.div>
 
       {/* Left Door */}
       <motion.div
@@ -107,9 +152,20 @@ const CaseCard = ({ item, idx }) => {
       </div>
 
       {/* Hover Arrow */}
-      <div className="absolute bottom-6 right-6 h-12 w-12 bg-white rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 scale-0 group-hover:scale-100 transition-all duration-300 z-30 shadow-lg">
+      <motion.div 
+        initial={{ opacity: 0, scale: 0, rotate: -180 }}
+        animate={{ 
+          opacity: isHovered ? 1 : 0,
+          scale: isHovered ? 1 : 0,
+          rotate: isHovered ? 0 : -180
+        }}
+        transition={{ duration: 0.3, type: "spring" }}
+        whileHover={{ scale: 1.2, rotate: 45 }}
+        style={{ transformStyle: "preserve-3d", z: 100 }}
+        className="absolute bottom-6 right-6 h-12 w-12 bg-white rounded-full flex items-center justify-center z-30 shadow-lg"
+      >
         <ArrowRight className="h-5 w-5 text-primary-blue" />
-      </div>
+      </motion.div>
     </motion.div>
   );
 };
@@ -120,26 +176,59 @@ const CaseStudies = () => {
       <div className="container">
         {/* Header */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-end mb-16">
-          <div>
-            <div className="flex items-center gap-3 mb-4">
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <motion.div 
+              initial={{ opacity: 0, scaleX: 0 }}
+              whileInView={{ opacity: 1, scaleX: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+              className="flex items-center gap-3 mb-4"
+            >
               <div className="h-[2px] w-10 bg-primary-blue" />
               <span className="text-primary-blue font-bold uppercase tracking-widest text-sm">
                 Case Studies
               </span>
-            </div>
-            <h2 className="text-4xl lg:text-5xl font-black text-primary-dark leading-tight">
+            </motion.div>
+            <motion.h2 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.3 }}
+              className="text-4xl lg:text-5xl font-black text-primary-dark leading-tight"
+            >
               Our Recent Work &<br />
-              <span className="text-primary-blue">Success Stories</span>
-            </h2>
-          </div>
-          <div className="lg:text-right">
+              <motion.span 
+                whileHover={{ scale: 1.05, display: "inline-block" }}
+                style={{ display: "inline-block" }}
+                className="text-primary-blue"
+              >
+                Success Stories
+              </motion.span>
+            </motion.h2>
+          </motion.div>
+          <motion.div 
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="lg:text-right"
+          >
             <p className="text-gray-600 font-medium leading-relaxed mb-6">
               Explore our portfolio of successful IT projects delivered across various industries and sectors worldwide.
             </p>
-            <button className="btn-primary inline-flex">
+            <motion.button 
+              whileHover={{ scale: 1.05, boxShadow: "0 20px 40px rgba(0,102,204,0.3)" }}
+              whileTap={{ scale: 0.95 }}
+              className="btn-primary inline-flex"
+            >
               View All Cases <ArrowRight className="h-4 w-4" />
-            </button>
-          </div>
+            </motion.button>
+          </motion.div>
         </div>
 
         {/* Cards */}
@@ -151,9 +240,11 @@ const CaseStudies = () => {
 
         {/* Global Stats Banner */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 50, rotateX: -15 }}
+          whileInView={{ opacity: 1, y: 0, rotateX: 0 }}
           viewport={{ once: true }}
+          transition={{ duration: 0.8, type: "spring" }}
+          style={{ transformStyle: "preserve-3d" }}
           className="mt-16 bg-gradient-to-r from-primary-blue to-[#0d2050] p-12 rounded-xl grid grid-cols-2 lg:grid-cols-4 gap-8 shadow-2xl"
         >
           {[
@@ -162,10 +253,25 @@ const CaseStudies = () => {
             { count: '200+', label: 'Local IT Companies' },
             { count: '1000+', label: 'Happy Clients' },
           ].map((item, idx) => (
-            <div key={idx} className="text-center border-r border-white/20 last:border-0">
-              <h4 className="text-5xl font-black text-white mb-2">{item.count}</h4>
+            <motion.div 
+              key={idx}
+              initial={{ opacity: 0, scale: 0.5, rotateY: -90 }}
+              whileInView={{ opacity: 1, scale: 1, rotateY: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: idx * 0.1, type: "spring" }}
+              whileHover={{ scale: 1.1, y: -10 }}
+              style={{ transformStyle: "preserve-3d" }}
+              className="text-center border-r border-white/20 last:border-0"
+            >
+              <motion.h4 
+                animate={{ scale: [1, 1.05, 1] }}
+                transition={{ duration: 2, repeat: Infinity, delay: idx * 0.3 }}
+                className="text-5xl font-black text-white mb-2"
+              >
+                {item.count}
+              </motion.h4>
               <p className="text-white/90 text-sm font-bold uppercase tracking-wider">{item.label}</p>
-            </div>
+            </motion.div>
           ))}
         </motion.div>
       </div>
